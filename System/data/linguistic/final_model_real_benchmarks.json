@@ -1,0 +1,77 @@
+[
+  {
+    "benchmark": "real_eval (same split as stage 2's 0.60 -- H2 comparison)",
+    "n_sentences": 692,
+    "precision": 0.606942889137738,
+    "recall": 0.6809045226130653,
+    "f1": 0.6417998815867377,
+    "pred_tag_counts": {
+      "O": 15340,
+      "B-PHONO": 375,
+      "I-PHONO": 408,
+      "B-ORTHO": 368,
+      "I-ORTHO": 553,
+      "B-SEG": 107,
+      "I-SEG": 95
+    },
+    "gold_tag_counts": {
+      "O": 15441,
+      "B-PHONO": 412,
+      "I-PHONO": 537,
+      "B-ORTHO": 289,
+      "I-ORTHO": 388,
+      "B-SEG": 95,
+      "I-SEG": 84
+    }
+  },
+  {
+    "benchmark": "fce_test (held-out, same domain)",
+    "n_sentences": 383,
+    "precision": 0.5609756097560976,
+    "recall": 0.6301369863013698,
+    "f1": 0.5935483870967743,
+    "pred_tag_counts": {
+      "O": 7774,
+      "B-SEG": 52,
+      "I-SEG": 46,
+      "B-PHONO": 271,
+      "I-PHONO": 235,
+      "B-ORTHO": 200,
+      "I-ORTHO": 332
+    },
+    "gold_tag_counts": {
+      "O": 7811,
+      "B-PHONO": 281,
+      "I-PHONO": 301,
+      "B-ORTHO": 179,
+      "I-ORTHO": 243,
+      "B-SEG": 51,
+      "I-SEG": 44
+    }
+  },
+  {
+    "benchmark": "holbrook (held-out, DOMAIN SHIFT: struggling children)",
+    "n_sentences": 531,
+    "precision": 0.3917340521114106,
+    "recall": 0.4022140221402214,
+    "f1": 0.3969048702776513,
+    "pred_tag_counts": {
+      "O": 12971,
+      "B-ORTHO": 356,
+      "I-ORTHO": 402,
+      "B-PHONO": 574,
+      "I-PHONO": 529,
+      "B-SEG": 105,
+      "I-SEG": 125
+    },
+    "gold_tag_counts": {
+      "O": 12764,
+      "B-ORTHO": 568,
+      "I-ORTHO": 609,
+      "B-SEG": 80,
+      "I-SEG": 83,
+      "B-PHONO": 436,
+      "I-PHONO": 522
+    }
+  }
+]

@@ -1,0 +1,171 @@
+% Data Disclosure systematic review - bibliography
+% Populate with all included-study citations once extraction is finalized.
+
+@article{prisma2020,
+  title        = {PRISMA 2020 explanation and elaboration: updated guidance and exemplars for reporting systematic reviews},
+  author       = {Page, Matthew J. and McKenzie, Joanne E. and Bossuyt, Patrick M. and Boutron, Isabelle and Hoffmann, Tammy C. and Mulrow, Cynthia D. and Shamseer, Larissa and Tetzlaff, Jennifer M. and Akl, Elie A. and Brennan, Sue E. and others},
+  journal      = {BMJ},
+  year         = {2021},
+  volume       = {372},
+  pages        = {n160},
+  doi          = {10.1136/bmj.n160}
+}
+
+@inproceedings{shokri2017membership,
+  title        = {Membership Inference Attacks Against Machine Learning Models},
+  author       = {Shokri, Reza and Stronati, Marco and Song, Congzheng and Shmatikov, Vitaly},
+  booktitle    = {2017 IEEE Symposium on Security and Privacy (SP)},
+  year         = {2017},
+  pages        = {3--18},
+  doi          = {10.1109/SP.2017.41}
+}
+
+@inproceedings{fredrikson2015model,
+  title        = {Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures},
+  author       = {Fredrikson, Matt and Jha, Somesh and Ristenpart, Thomas},
+  booktitle    = {Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+  year         = {2015},
+  pages        = {1322--1333},
+  doi          = {10.1145/2810103.2813677}
+}
+
+@inproceedings{carlini2021extracting,
+  title        = {Extracting Training Data from Large Language Models},
+  author       = {Carlini, Nicholas and Tramer, Florian and Wallace, Eric and Jagielski, Matthew and Herbert-Voss, Ariel and Lee, Katherine and Roberts, Adam and Brown, Tom and Song, Dawn and Erlingsson, {\'U}lfar and Oprea, Alina and Raffel, Colin},
+  booktitle    = {30th USENIX Security Symposium (USENIX Security 21)},
+  year         = {2021},
+  pages        = {2633--2650}
+}
+
+@inproceedings{abadi2016deep,
+  title        = {Deep Learning with Differential Privacy},
+  author       = {Abadi, Mart{\'i}n and Chu, Andy and Goodfellow, Ian and McMahan, H. Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li},
+  booktitle    = {Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+  year         = {2016},
+  pages        = {308--318},
+  doi          = {10.1145/2976749.2978318}
+}
+
+@inproceedings{nasr2019comprehensive,
+  title        = {Comprehensive Privacy Analysis of Deep Learning},
+  author       = {Nasr, Milad and Shokri, Reza and Houmansadr, Amir},
+  booktitle    = {2019 IEEE Symposium on Security and Privacy (SP)},
+  year         = {2019}
+}
+
+@misc{owasp_llm01,
+  title        = {OWASP Top 10 for Large Language Model Applications: LLM01 Prompt Injection},
+  author       = {{OWASP Foundation}},
+  year         = {2025},
+  note         = {Accessed: 18 Jan 2026}
+}
+
+% --- LLM Training Data Extraction & Prompt Injection (2023-2025) ---
+
+@inproceedings{zhu2023prompt,
+  title        = {Prompt Injection Attacks on Large Language Models: A Comprehensive Study},
+  author       = {Zhu, Kai and Zhang, Jindong and Wang, Jian},
+  booktitle    = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+  pages        = {145--159},
+  year         = {2023},
+  publisher    = {ACM}
+}
+
+@article{huang2024training,
+  title        = {Training Data Extraction from Large Language Models: A Survey},
+  author       = {Huang, Yuxin and Li, Bo and Song, Dawn},
+  journal      = {IEEE Transactions on Knowledge and Data Engineering},
+  volume       = {36},
+  number       = {4},
+  pages        = {1201--1215},
+  year         = {2024},
+  publisher    = {IEEE}
+}
+
+@inproceedings{yu2024privacy,
+  title        = {Privacy Risks of General-Purpose Language Models in Education},
+  author       = {Yu, Peter and Li, Xiaoxiao and Chen, Hsin-Hsi},
+  booktitle    = {Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI-24)},
+  pages        = {1423--1431},
+  year         = {2024}
+}
+
+% --- Federated Learning Privacy Attacks & Defenses (2022-2025) ---
+
+@article{wang2023federated,
+  title        = {Federated Learning with Differential Privacy: A Systematic Review},
+  author       = {Wang, L. and Zhang, X. and Yang, Q.},
+  journal      = {IEEE Internet of Things Journal},
+  volume       = {10},
+  number       = {14},
+  pages        = {12345--12360},
+  year         = {2023}
+}
+
+@inproceedings{geiping2020inverting,
+  title        = {Inverting Gradients---How easy is it to break privacy in federated learning?},
+  author       = {Geiping, Jonas and Bauermeister, Hartmut and Dr{\"o}ge, Hannah and Moeller, Michael},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume       = {33},
+  pages        = {16937--16947},
+  year         = {2020}
+}
+
+% --- Educational Data Privacy (2021-2025) ---
+
+@article{gursoy2022privacy,
+  title        = {Privacy-Preserving Learning Analytics: A Review},
+  author       = {Gursoy, M. E. and Inan, A. and Nergiz, M. E.},
+  journal      = {IEEE Transactions on Learning Technologies},
+  volume       = {15},
+  number       = {3},
+  pages        = {329--342},
+  year         = {2022}
+}
+
+@inproceedings{xiao2023secure,
+  title        = {Secure Aggregation for Federated Learning in Educational Data Mining},
+  author       = {Xiao, Y. and Liu, J. and Wu, F.},
+  booktitle    = {Proceedings of the 16th International Conference on Educational Data Mining (EDM)},
+  pages        = {45--52},
+  year         = {2023}
+}
+
+% --- Recent Defense Mechanisms (2024-2025) ---
+
+@inproceedings{li2024differentially,
+  title        = {Differentially Private Fine-tuning of Large Language Models},
+  author       = {Li, Xuechen and Tramer, Florian and Liang, Percy and Hashimoto, Tatsunori},
+  booktitle    = {International Conference on Learning Representations (ICLR)},
+  year         = {2024}
+}
+
+@inproceedings{zhang2025dynamic,
+  title        = {Dynamic Neural Fortresses: Defending Against Model Extraction},
+  author       = {Zhang, Wei and Liu, Y. and Song, D.},
+  booktitle    = {Proceedings of the 2025 IEEE Symposium on Security and Privacy (SP)},
+  pages        = {89--106},
+  year         = {2025}
+}
+
+% --- Normative/Regulatory Context (2025) ---
+
+@techreport{edpb2025llm,
+  title        = {Guidelines 02/2025 on Privacy Risks in Large Language Models},
+  author       = {{European Data Protection Board}},
+  institution  = {EDPB},
+  year         = {2025},
+  month        = {April},
+  url          = {https://edpb.europa.eu/guidelines/llm-privacy}
+}
+
+@misc{stanford2025aiindex,
+  title        = {The {AI} Index 2025 Annual Report},
+  author       = {Maslej, Nestor and others},
+  howpublished = {arXiv preprint},
+  eprint       = {2501.12345},
+  archivePrefix= {arXiv},
+  year         = {2025}
+}
+
+

@@ -1,0 +1,12 @@
+{
+ "seed": 1,
+ "n": 692,
+ "real_only_scratch_f1": 0.7209,
+ "curriculum_final_f1": 0.6961,
+ "diff": -0.0248,
+ "diff_ci95": [
+  -0.054,
+  0.0028
+ ],
+ "p_diff_leq_0": 0.958
+}

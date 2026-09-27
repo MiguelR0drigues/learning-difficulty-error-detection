@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MEIA Dissertation
+% LaTeX Template
+% (Jan/2022)
+%
+% Adapted once again to MEIA/ISEP style (Jan(2022) by:
+%  Luiz Faria (lef@isep.ipp.pt)
+%
+% Adapted to TMDEI/ISEP style (Dec/2015) by
+%  Nuno Pereira (nap@isep.ipp.pt) and
+%  Paulo Baltarejo (pbs@isep.ipp.pt)
+%
+% Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
+% Johannes Böttcher, downloaded from (21/11/15):
+% http://www.LaTeXTemplates.com
+%
+% This template is originally based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Avoid blank pages inserted to force chapters onto right-hand pages (enable twoside later if you need duplex printing)
+english, % english for English;
+%portuguese,% for Portuguese; delete temporary files if you change language (e.g. 'make clean; make')
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing (for drafting/reading purposes)
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents (not recommended)
+%toctotoc, % Uncomment to add the main table of contents to the table of contents (not recommended)
+parskip, % Add space between paragraphs (recommended)
+%nohyperref, % Uncomment to not load the hyperref package (not recommended)
+nohyperreflinkcolor, % hyperref links are not colored (comment to color links, for example to produce an electronic-only version)
+headsepline, % Uncomment to get a line under the header
+]{meia-style} % The class file specifying the document structure
+
+\usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
+%\usetikzlibrary{arrows} % Required for fancy arrows in TiKZ graphics (can be removed if not used)
+
+\usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
+\pgfplotsset{compat=newest}
+
+%
+% Next you have examples of admissable citation styles; we recomend using the authoryear-comp citation style (which resembles Harvard); don't forget to only uncomment one
+%
+
+% Line breaking: lets TeX stretch inter-word space slightly instead of letting long words/citations poke into the margin
+\setlength{\emergencystretch}{3em}
+
+% authoryear-comp: recommended citation style (e.g. (Buendía, 1860), (Buendía 1910, Arcadio 1940))
+\usepackage[style=authoryear-comp,backend=biber]{biblatex} % BibLaTeX with Biber backend (recommended); citations are author-year, bibliography alphabetical
+
+% numeric citation style (e.g. [1], [1-3])
+%\usepackage[style=numeric-comp,sorting=none,backend=bibtex]{biblatex} % BibLaTeX with BibTeX backend (numeric citations, bibliography ordered by appearance)
+
+% alphabetic citation style (e.g. [Buendía10], [Buendía10, Arcadio40])
+%\usepackage[style=alphabetic,sorting=none,backend=bibtex]{biblatex} % BibLaTeX with BibTeX backend (alphabetic citations, bibliography ordered by appearance)
+
+\usepackage{makecell}
+
+\addbibresource{mainbibliography.bib} % The filename of the bibliography
+
+%\makeglossaries % build the glossary
+\makenoidxglossaries % build the glossary (to work with overleaf)
+\input{frontmatter/glossary} % the command makenoidxglossaries requires that the glossary entries must be defined in the preamble
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{System for Error Detection and Learning Difficulties} % Your thesis title, this is used in the title, print it elsewhere with \ttitle
+
+\thesissubtitle{Automatic Analysis of Student Responses in Primary and Secondary Education} % Your thesis subtitle, this is used in the title, print it elsewhere with \tsubtitle
+
+\author{Miguel Mendes Rodrigues} % Your name, this is used in the title page, print it elsewhere with \authorname
+
+\studentnumber{1181734}
+
+%\subjectarea{Área de Especialização} % Specialisation area, used in the title page, print it elsewhere with \areaname
+
+\supervisor{Doctor Luís Filipe de Oliveira Gomes, Assistant Researcher, Polytechnic of Porto - School of Engineering} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+
+
+\committeepresident{Doctor Luiz Felipe Rocha de Faria, Associate Professor, Polytechnic of Porto - School of Engineering} % Name of the president of the evaluation committee, print it elsewhere with \presidentname
+
+\committeemembers{Doctor António Constantino Lopes Martins, Associate Professor, Polytechnic of Porto - School of Engineering\\Doctor Luís Filipe de Oliveira Gomes, Assistant Researcher, Polytechnic of Porto - School of Engineering} % Name of the evaluation committee members (up to four), print it elsewhere with \committee
+
+\keywords{Natural Language Processing, Educational Data Mining, Error Analysis, Symbolic Artificial Intelligence, Student Profiling, Synthetic Data Generation}
+
+\university{\href{http://www.isep.ipp.pt}{Instituto Superior de Engenharia do Porto}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+
+\department{Departamento de Engenharia Inform\'atica} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+
+\thesisdate{Porto, September 2026}
+
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	FRONT MATTER
+%----------------------------------------------------------------------------------------
+
+% Include the frontmatter of your thesis here
+\input{frontmatter/frontmatter}
+
+%----------------------------------------------------------------------------------------
+%	MAIN BODY
+%----------------------------------------------------------------------------------------
+
+% Include the chapters of the thesis as separate folder for each chapter
+% Uncomment the lines as you write the chapters
+
+\input{ch1/chapter1}
+\input{ch2/chapter2}
+\input{ch3/chapter3}
+\input{ch4/chapter4}
+\input{ch5/chapter5}
+\input{ch6/chapter6}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\printbibliography[heading=bibintoc]
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+% \input{appendices/appendixA}
+%\input{appendices/appendixB}
+%\input{appendices/appendixC}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

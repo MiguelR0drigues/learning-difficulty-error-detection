@@ -1,0 +1,28 @@
+# Core
+numpy
+scikit-learn
+sympy
+
+# Linguistic module
+transformers
+datasets
+huggingface_hub
+errant
+jellyfish
+seqeval
+sentencepiece
+tiktoken
+
+# torch: install SEPARATELY, do not just pip install from this file --
+# the right command depends on your GPU/CUDA driver. See RUN_ON_GPU.md.
+# For an RTX 50-series (Blackwell, sm_120) card:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+# CPU-only (what this sandbox used, no GPU available):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# after installing the above, also run:
+#   pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
+# IMPORTANT: use Python 3.11 or 3.12 for this venv, not 3.14 -- spaCy's
+# dependencies (thinc, blis) don't have reliable prebuilt wheels for 3.14
+# yet and will fail to compile from source. See RUN_ON_GPU.md.

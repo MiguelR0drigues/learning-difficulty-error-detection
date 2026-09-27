@@ -1,0 +1,114 @@
+% Chapter 6
+
+\chapter{Conclusions and Future Work} % Main chapter title
+\label{chap:Chapter6} % For referencing the chapter elsewhere, use \ref{chap:Chapter6}
+
+%----------------------------------------------------------------------------------------
+
+This chapter summarizes the research contributions (Section~\ref{sec:concl_contrib}), revisits the research questions and hypotheses against the experimental evidence (Section~\ref{sec:concl_rq}), consolidates the limitations (Section~\ref{sec:concl_limit}), and outlines future work (Section~\ref{sec:concl_future}). The domain gap to the target population, quantified in Chapter~\ref{chap:Chapter5}, is treated throughout as the main open problem.
+
+\section{Summary of Contributions}
+\label{sec:concl_contrib}
+
+This thesis addressed the automatic detection of error patterns linked to learning difficulties in typed student responses. Its contributions are of three kinds: empirical results, reusable methodological findings, and a working system.
+
+The first contribution is an operational taxonomy with an audited mapping from public corpora. The three-category linguistic taxonomy (phonological, orthographic, segmentation) was made operational through a deterministic mapper from ERRANT-annotated GEC corpora. The mapper was audited against $\sim$65{,}000 real gold edits, and the audit caught three plausible-looking but wrong mapping rules. Beyond the taxonomy itself, the practical contribution is the demonstrated route from generic public GEC annotations to difficulty-oriented labels.
+
+The synthetic-data hypothesis received a quantified, negative answer. The direct test compared real-only training from scratch with the full synthetic-to-real curriculum on identical real evaluation sentences (four seeds, paired bootstrap). At the headline $10^6$ synthetic pool the curriculum lands 2.5--7.0 $F_1$ points below real-only training, with three of four intervals excluding zero. The scale ablation shows real-data transfer degrading as synthetic volume grows while in-domain performance rises, and nine paired stage-2-versus-final comparisons show that the combined stage adds nothing reliable. At the ablation-optimal $10^4$ pool the same paired comparison finds no gain either: parity in two of three seeds, and in the third a loss whose interval excludes zero. Under the evaluated conditions, then, rule-based synthetic data of the kind generated here does not improve on scarce real data. At best it is neutral at small volumes, and generating more of it is counterproductive. The match between synthetic and authentic error distributions, not volume, is the limiting factor.
+
+For mathematical misconceptions, the thesis measures a trade-off between symbolic and ML methods and reports an item-design result. On generated answers that follow the modeled malrules exactly, symbolic simulation is perfect and a gradient-boosted classifier nearly matches it (accuracy 0.997). Under a one-digit slip superimposed on the malrule answer, the symbolic method collapses to 0\% by construction while the classifier retains 61.7\%. The item-design result concerns malrule \emph{distinguishability}, which depends on problem structure: two-digit subtraction can never separate the three modeled bugs, while six-digit problems with a forced borrow-through-zero separate all three in 74.8\% of items. Item structure is therefore a diagnostic design variable.
+
+Difficulty profiling under data absence rests on a three-way evidence design. No public dataset offers longitudinal, difficulty-labeled, per-student responses, so profiling was assessed from three directions: recoverability of known archetypes in simulation (with a two-factor experiment quantifying how many observations per student reliable clustering requires); the existence of archetype-like shapes among 19 real struggling child writers (including an unsupervised-emergent phonologically-dominant profile consistent with phonological-deficit accounts of dyslexia, under the thesis's operationalization of the phonological/orthographic boundary); and the split-half stability of behavioral profiles on 1{,}519 real students (ARI 0.587). This design supports the structural claims of H3. It does not validate the profiles against educator judgment or any external construct.
+
+The engineering lessons are documented as well. The implementation chapters record the full decision path, including failed intermediate attempts: the loss-function progression forced by extreme class imbalance (plain and weighted cross-entropy each collapsing in opposite directions before focal loss stabilized training), silent numerical failure modes (fp16 checkpoint loading without loss scaling), and two evaluation-design failures (template memorization; synthetic-dominated evaluation sets) that produced misleadingly high scores before being diagnosed. Similar educational-NLP efforts can reuse these as warnings.
+
+The two-regime detection design comes with a measured justification. Worksheet items have known targets, so the system routes closed-world responses to a deterministic, domain-gap-free scorer over diagnostically selected items (screening) and reserves the neural model for open-world free text (monitoring). The profile-fidelity experiment justifies the split empirically. Under domain shift, free-text detection preserves student rankings by error volume (Spearman $0.898$) but not by error type ($0.18$--$0.62$), and screening recovers the type-resolved signal that free text loses.
+
+The last contribution is a pilot-ready prototype with a bilingual screening mode and an explicit ethical framing. The thin web prototype (student exercise flow; teacher dashboard over the profiling representation) demonstrates the full pipeline end-to-end and surfaced two deployment findings that the benchmarks had not (confidence thresholding; tokenization-contract violations). It also embodies the thesis's non-clinical posture: local-only storage, formative vocabulary, teacher interpretation required. The screening mode runs in both English and European Portuguese. The Portuguese instantiation (item bank plus purpose-built phonetic comparator, validated by unit and archetypal tests and a reproducible case-study walkthrough) delivers the portability claim the two-regime design makes, in the thesis's original motivating language.
+
+\section{Revisiting Research Questions and Hypotheses}
+\label{sec:concl_rq}
+
+The research questions come first, followed by the hypotheses, and both are judged against the experimental evidence of Chapter~\ref{chap:Chapter5}. Each hypothesis verdict states whether the evidence supports the claim and where that evidence is still incomplete.
+
+\subsection{Research Questions}
+\label{sec:concl_rq_questions}
+
+\textbf{Q1} (linguistic error taxonomies). The three-category taxonomy proved operationalizable at scale, and its categories also exist in real struggling writers' data. Clustering the Holbrook children's per-student error distributions yields groups distinguished by dominant category (phonological-dominant, orthographic-dominant, mild/segmentation-leaning), a structure that no analysis step assumed in advance. Prevalence differs by population. Orthographic errors are over-represented among struggling child writers relative to adult L2 learners, and this is what the domain-shift experiment exposed.
+
+\textbf{Q2} (detection and classification models). Supported with quantified boundaries. The final model reaches span-level $F_1 = 0.642$ on real learner text under a strict exact-span, exact-type metric, and $0.594$ on a fully held-out same-domain benchmark. On the target population (Holbrook), performance drops to $0.397$; automated detection is practical within the training domain and measurably degraded outside it. Comparison against human inter-annotator agreement remains future work, as no such annotation study was run.
+
+\textbf{Q3} (mathematical misconception detection). The answer is a trade-off with two sides. Symbolic methods are exact and interpretable on modeled bugs but brittle to any deviation, while a simple ML classifier is marginally less exact and far more robust (61.7\% vs.\ 0\% under answer noise). The two methods complement each other. The distinguishability experiment adds that what the system can diagnose is bounded by which problems it poses.
+
+\textbf{Q4} (data scarcity and synthesis). Under the evaluated conditions, the synthetic curriculum was not the most effective training set. Fine-tuning on the real training split alone outperformed the full curriculum at $10^6$ synthetic examples in every seed. Among curriculum variants, a modest synthetic pool ($10^4$ examples) transferred best, and scaling to the million-sentence level improved only in-domain performance while degrading real-data transfer. Tested directly against real-only training, that small pool was neutral in two of three seeds and worse in the third, never better. LLM-based augmentation was considered and not adopted (label reliability, cost at scale, sufficiency of rules for the surface-realizable taxonomy). The current generator falls short on fidelity to authentic error distributions, both for the adult learner corpora (as the from-scratch comparison shows) and for the target population (as the domain gap shows).
+
+\textbf{Q5} (difficulty profiling). Aggregated error patterns do cluster into stable, interpretable profiles. This comes with quantified preconditions, and their pedagogical meaningfulness to educators has not yet been assessed. Simulation shows that reliable recovery (ARI $> 0.9$) requires either sharply distinct profiles or a few hundred observations per student. Real behavioral data shows two cleanly interpretable clusters (``coping'' vs.\ ``struggling'', the latter marked by faster, hint-heavy, repeated-failure responding) with substantial but imperfect split-half stability (ARI 0.587). The prototype's dashboard presents profiles in the intended non-clinical format. Its screening mode addresses the practical question behind Q5, which is how quickly a teacher can get a signal: one or two worksheets are meant to yield a type-resolved \emph{screening} flag (closed-world scoring of diagnostically selected items; not yet validated with children), while stable \emph{profiles} still require the longitudinal accumulation the ARI experiment quantifies.
+
+\subsection{Hypotheses}
+\label{sec:concl_rq_hyp}
+
+\textbf{H1} is supported in its testable part, with a quantified domain boundary. NLP and symbolic methods identify the error types of the instructionally grounded taxonomy under strict metrics, and the mathematical module identifies modeled procedural bugs with near-perfect accuracy on clean generated answers. The claim ``performance consistent with expert teacher annotations'' could not be tested directly (no annotation study). What was tested and quantified is performance against gold corpus annotations, including on the target population, where the 20-point drop marks the current boundary of validity.
+
+\textbf{H2} is not supported. Against real-only training from scratch on identical real evaluation data, the $10^6$ curriculum is 2.5--7.0 $F_1$ points worse in each of four seeds (three of four paired intervals excluding zero). The $10^4$ curriculum is at best neutral (parity in two of three seeds, significantly worse in the third). The scale ablation shows real-data performance declining as synthetic volume grows, and nine paired stage-2-versus-final comparisons show the combined stage adds nothing reliable. The claim the evidence supports is the negative, design-relevant one from Chapter~\ref{chap:Chapter5}: under a fixed real-data budget, rule-based synthetic data of the kind generated here does not substitute for real data, and past a modest volume the limiting factor is error type-match, not data amount. The hypothesis as originally stated included LLM-based generation, which was not adopted, so the evidence addresses the rule-based half of the hypothesis and leaves the LLM half untested.
+
+\textbf{H3} is partially supported. The structural evidence converges, but pedagogical validation is pending. No single dataset could test H3; the combination of simulation recoverability, archetype-like structure in real struggling writers, and longitudinal stability of behavioral profiles covers its structural claims. Two components remain untested. One is the ``meaningful and actionable for educators'' component, which no educator has assessed. The other is the full loop on the target population, meaning profiles built from this system's own detections on real children's responses over a school term. Both require the pilot deployment outlined below.
+
+\section{Limitations}
+\label{sec:concl_limit}
+
+The limitations documented throughout Chapters~3--5 come down to six:
+
+\begin{itemize}
+    \item The domain gap to the target population is the dominant limitation. All real training data is adult L2 learner writing; on real struggling child writers, detection $F_1$ drops from $\sim$0.6 to $\sim$0.4, with a diagnostic error signature (phonological over-prediction, orthographic under-prediction). Every claim in this thesis about the target population inherits this boundary.
+    \item The benchmark for that population is limited in size and provenance. The only located target-population benchmark (Holbrook) comprises 19 writers and 531 sentences from a 1964 British classroom, transcribed by their teacher. It is directionally informative but statistically thin.
+    \item Free-text experiments cover English only. The trained model, the corpora, and the homophone lexicon are English resources, and Portuguese free-text deployment, the original motivating context, still requires Portuguese data end to end. The screening regime is the exception: its European Portuguese instantiation (item bank plus phonetic comparator, Section~\ref{sec:impl_prototype_screening_pt}) runs end to end and passes its archetypal test suite, though it has not yet been administered to children.
+    \item The scope is non-clinical, by design. Profiles are statistical constructs over observable errors. No clinical validation was attempted, none is claimed, and the system's outputs are framed accordingly. This is an ethical stance, and it also matches what the evidence supports.
+    \item The mathematical results use generated data only. Every mathematical figure (clean accuracy, robustness to a modeled digit slip, distinguishability) is computed on generated malrule answers, and no real student arithmetic was evaluated. The results characterize the methods under the modeled conditions, not classroom diagnostic accuracy.
+    \item No educator has validated the work. Detections, taxonomy categories, and profiles were not reviewed by teachers, and no inter-annotator study was conducted. The ``pedagogically meaningful'' and ``actionable'' components of H1 and H3 rest on the taxonomy's grounding in the literature, not on measured teacher agreement; the pilot below is where that evidence would come from.
+\end{itemize}
+
+\section{Future Work}
+\label{sec:concl_future}
+
+Future work follows from the limitations above. The domain gap to the target population comes first because it is the main open problem. After it come the validation of the screening instrument, a school pilot, support for Portuguese, and a set of broader extensions of the approach.
+
+\subsection{Closing the Domain Gap}
+\label{sec:concl_future_gap}
+
+The 20-point Holbrook drop defines the highest-value research direction, approachable on three fronts in increasing order of cost:
+\begin{enumerate}
+    \item The generator can be matched to the target population. It currently corrupts text uniformly, and the from-scratch comparison shows that more of that distribution hurts. The Holbrook analysis provides real per-population error distributions (category proportions, density) that the generator could target instead, and the natural next test is whether better-matched synthetic data can help even without more of it. LLM-based generation, rejected for the uniform case, becomes attractive here: generating text with a specified population's error signature is what conditional generation is for.
+    \item Even tens of in-domain sentences (an ethics-cleared micro-pilot) could support few-shot adaptation, through continued fine-tuning or adapter layers, evaluated against the Holbrook benchmark already in place.
+    \item The definitive fix is an in-domain corpus: an ethics-approved collection of typed responses from the target population, difficulty-annotated with teacher input. It is costly, but the thesis's pipeline (taxonomy mapper, BIO conversion, benchmarks) makes every collected sentence immediately usable.
+\end{enumerate}
+
+\subsection{Validating the Screening Instrument}
+\label{sec:concl_future_screening}
+
+The screening item bank rests on principled but unvalidated item selection. The discriminative signature of each word family is argued from the taxonomy and the mapper's mechanics, and it has not yet been measured on children. A validation study would administer the worksheet to a real class and compare the outcome with teacher judgment. Such a study is small and ethically simple (a normal dictation exercise), and it would also yield the first in-domain data for the adaptation path above. The European Portuguese instantiation of the screening mode (Section~\ref{sec:impl_prototype_screening_pt}) would be validated by the same protocol.
+
+\subsection{School Pilot}
+\label{sec:concl_future_pilot}
+
+The prototype makes a concrete pilot protocol possible. It would be deployed locally in one school, with consent and pseudonymization, and would collect (i) real detection precision as experienced by teachers, (ii) the per-student observation counts the ARI experiment identifies as necessary, and (iii) teacher judgments of profile interpretability. The last is the educator-validation step deliberately not claimed in this thesis. The pilot also feeds direction 3 above.
+
+\subsection{Portuguese Support}
+\label{sec:concl_future_pt}
+
+The screening half of Portuguese support was delivered within this thesis. Section~\ref{sec:impl_prototype_screening_pt} describes the European Portuguese item bank and grapheme-to-phoneme comparator, and the case-study walkthrough exercises them end to end. It confirms the prediction that the closed-world regime ports with two artifacts and no data. What remains is (i) validating that instantiation with real Portuguese children (the item families and trap words are principled but not yet field-tested), and (ii) the free-text path, which is the expensive half. That path needs a Portuguese encoder (e.g., BERTimbau or multilingual DeBERTa), Portuguese base sentences for the synthetic generator, a Portuguese homophone lexicon, and above all Portuguese error-annotated data. The COPLE2 population mismatch that redirected this thesis remains unsolved and would need addressing, most plausibly via the pilot route.
+
+\subsection{Broader Extensions}
+\label{sec:concl_future_broader}
+
+In order of readiness, the first extension is introductory algebra misconceptions, using the expert-validated MaE dataset. The detection architecture transfers, but the item-design analysis would need redoing for each misconception class. Next, detected profiles could be coupled to intervention suggestions, which moves the system from detection toward tutoring \parencite{VanLehn2006}. Handwriting input via OCR/HTR would fit real classroom workflows. The last extension is a set of longitudinal studies, run with educational psychologists, that correlate early detected patterns with later outcomes. That is the eventual bridge between statistical profiles and clinically meaningful categories, and it should never be shortcut.
+
+\section{Concluding Remarks}
+\label{sec:concl_final}
+
+This thesis set out to detect error patterns linked to learning difficulties in typed student responses, under the constraint that the data such a system most needs largely does not exist publicly. The results are two-sided.
+
+Symbolic and learned methods for mathematical bugs trade exactness against robustness, which makes them complements, and what they can diagnose depends on the items posed. Difficulty profiles are recoverable in simulation, present as archetype-like structure in real struggling writers, and stable in real longitudinal behavioral data. Under domain shift, free-text detection preserves error-volume rankings while losing error-type rankings, which gives the two-regime design an empirical basis. The whole pipeline runs end to end in a pilot-ready prototype.
+
+There are also two negative results. Rule-based synthetic data did not improve on real-only training at the volume evaluated, and its value is bounded by the match between synthetic and authentic error distributions. A 20-point performance drop on real struggling child writers quantifies how far training on available proxy populations carries, and how far it does not.
+
+The thesis demonstrates the method (a taxonomy, a controlled evaluation of synthetic data, complementary detectors, and multi-source profiling evidence, all reproducible) and measures the distance that remains to the application. It does not claim readiness for classroom use. That measured distance is what makes the next steps (population-targeted generation, a consented school pilot, Portuguese resources) concrete.

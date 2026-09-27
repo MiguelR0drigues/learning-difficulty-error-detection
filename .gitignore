@@ -1,0 +1,50 @@
+build/
+dist/
+__pycache__/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.pdf
+!main.pdf
+
+# OS cruft
+.DS_Store
+
+# Working/internal material kept out of the public showcase
+Thesis document/_backup_*/
+Thesis document/PREPARACAO_DEFESA.md
+Thesis document/prompt.md
+Thesis document/humanize-prompt.md
+Thesis document/ch3/ch3
+Thesis document/ch4/ch4
+Thesis document/ch5/ch5
+Thesis document/ch6/ch6
+Thesis document/figures/figures
+Claude outputs/
+
+# Trained model checkpoints (hundreds of MB each) and the largest synthetic
+# datasets - regenerable from System/*/README.md and the training scripts,
+# too large for a git repo (GitHub's hard limit is 100MB/file)
+System/linguistic/final_model*/
+System/linguistic/real_only_scratch_*/
+System/linguistic/scale_model_*/
+System/linguistic/smoke_test_final_model/
+System/linguistic/stage2_model_*/
+System/linguistic/out_*/
+System/linguistic/eval_tmp/
+System/linguistic/__pycache__/
+System/data/linguistic/clean_base_sentences.json
+System/data/linguistic/synthetic_corruption.json
+System/data/math/fraction_synthetic.json
+System/data/math/subtraction_synthetic.json
+System/data/profiling_real/skill_builder_data.csv

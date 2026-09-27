@@ -1,0 +1,21 @@
+{
+ "benchmark": "fce_test_bio.json",
+ "n_sentences": 383,
+ "n_boot": 2000,
+ "neural_f1": 0.6686,
+ "neural_ci95": [
+  0.6275,
+  0.7089
+ ],
+ "baseline_f1": 0.4586,
+ "baseline_ci95": [
+  0.4191,
+  0.4986
+ ],
+ "diff_point": 0.21,
+ "diff_ci95": [
+  0.1559,
+  0.264
+ ],
+ "p_diff_leq_0": 0.0
+}

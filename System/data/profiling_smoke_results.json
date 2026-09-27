@@ -1,0 +1,29 @@
+{
+  "n_students": 180,
+  "feature_names": [
+    "PHONO",
+    "ORTHO",
+    "SEG",
+    "SFL",
+    "BORROW_ZERO",
+    "BORROW_NO_DEC",
+    "FRAC_ADD",
+    "FRAC_COMPARE",
+    "overall_error_rate",
+    "error_trend_slope"
+  ],
+  "results": {
+    "kmeans": {
+      "silhouette": 0.45196590255659685,
+      "davies_bouldin": 1.093596045666299,
+      "adjusted_rand_index": 0.9732652678260271
+    },
+    "hdbscan": {
+      "n_clusters_found": 5,
+      "n_noise_points": 37,
+      "adjusted_rand_index": 0.9046992794090926,
+      "silhouette_excl_noise": 0.5612665676794315
+    }
+  },
+  "note": "With weak archetype separation (dominant-label weight ~6-7x background) and few sessions (6 sessions x 10 responses), KMeans ARI was only ~0.53-0.58 and HDBSCAN failed to find clusters at all -- both archetype separation strength AND number of observations per student materially affect recoverability. With stronger separation (~10-13x) and more observations (10 sessions x 20 responses), KMeans reaches ARI=0.97 and HDBSCAN 0.90. This parameter sensitivity is itself a real finding worth reporting in Ch.5: recoverability of difficulty profiles depends on how many responses are observed per student, which has a direct implication for how much data a real deployment needs to collect before profiles become reliable."
+}

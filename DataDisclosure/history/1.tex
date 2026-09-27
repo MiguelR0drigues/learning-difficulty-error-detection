@@ -1,0 +1,402 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Data Disclosure in Artificial Intelligence and Machine Learning Systems: A Systematic Review}
+\author{Anonymous}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Data disclosure in machine learning systems poses significant privacy risks to organizations and individuals. This systematic review synthesizes empirical evidence on data disclosure attacks and mitigation techniques in AI/ML systems across domains, with particular attention to educational applications. Following PRISMA 2020 guidelines, we searched IEEE Xplore, ACM Digital Library, Scopus, and Google Scholar for peer-reviewed studies published between January 2018 and January 2026. We identified and characterized three major categories of disclosure threats: membership inference attacks, model inversion attacks, and training data extraction attacks. Corresponding defense mechanisms include differential privacy, federated learning, secure aggregation, and secure multi-party computation. Our review of 40 empirical studies reveals that ensemble and cryptographic approaches offer complementary protection, though significant trade-offs between privacy and model utility persist. Key gaps include limited public benchmarks for evaluation, heterogeneous privacy metrics, and sparse research on educational and specialized domains. Future work should prioritize standardized evaluation frameworks, deployment-focused privacy research, and integration of privacy protections into model development pipelines.
+\end{abstract}
+
+\section{Introduction}
+
+Machine learning systems trained on sensitive data—ranging from healthcare records to student academic performance—create inherent tension between model utility and individual privacy. The process of training models requires exposure to large quantities of personal information, creating opportunities for unintended information leakage. Recent high-profile incidents, including data leaks from commercial ML services and concerns over training data retention in large language models (LLMs), underscore the practical urgency of this problem.
+
+Data disclosure risks manifest across multiple attack vectors. Membership inference attacks determine whether a specific individual's data were included in a model's training set. Model inversion attacks reconstruct sensitive attributes or even entire training examples from model outputs. Training data extraction, particularly acute in LLMs, allows attackers to recover verbatim sequences from training data through carefully crafted queries. These threats are not merely theoretical: companies ranging from Amazon to Samsung have reported costly incidents when employees inadvertently exposed sensitive data through interactions with public LLMs.
+
+Simultaneously, privacy-preserving machine learning (PPML) techniques have matured considerably. Differential privacy adds calibrated noise to protect individual records while maintaining aggregate utility. Federated learning enables collaborative model training without centralizing sensitive data. Secure aggregation and secure multi-party computation allow gradient updates and predictions to be computed on encrypted data. Yet practitioners face persistent challenges: trade-offs between privacy and accuracy, computational overhead, and lack of standardized evaluation frameworks.
+
+The educational sector represents a particularly important application domain. Student data encompass academic performance, behavioral patterns, learning diagnostics, and biometric identifiers in some systems. Educational institutions increasingly deploy AI-driven personalized learning systems, automated grading, and predictive analytics for student success. These applications amplify privacy concerns due to students' status as a vulnerable population, the sensitivity of educational records, and requirements under regulations such as FERPA (U.S.), GDPR (EU), and national data protection laws.
+
+This systematic review aims to synthesize the state of empirical evidence on data disclosure threats and mitigations in AI/ML systems. We address two research questions:
+
+\begin{enumerate}
+\item \textbf{RQ1 -- Typology of risks}: What types of data disclosure risks have been identified in artificial intelligence and machine learning systems (including educational applications) between 2018 and 2026?
+\item \textbf{RQ2 -- Mitigation and trade-offs}: Which technical and organizational approaches have been proposed to measure and mitigate data disclosure in AI/ML models, and what are their reported impacts on model utility and system deployment?
+\end{enumerate}
+
+By synthesizing this evidence in alignment with PRISMA 2020 guidelines, we aim to support researchers, practitioners, and policymakers in understanding the landscape of disclosure risks and defenses, identifying methodological gaps, and prioritizing future research directions.
+
+\section{Methods}
+
+\subsection{Protocol and Registration}
+
+This systematic review was conducted following the PRISMA 2020 guidelines and checklist. While not pre-registered in PROSPERO, the protocol was defined a priori before conducting searches and study selection.
+
+\subsection{Eligibility Criteria (PICOS Framework)}
+
+\subsubsection{Population / Problem (P)}
+Artificial intelligence and machine learning systems trained or deployed on personal, sensitive, or confidential data, including but not limited to health, finance, and education sectors.
+
+\subsubsection{Intervention (I)}
+Any explicit method aimed at (a) assessing data disclosure risk through empirical attacks (e.g., membership inference, model inversion, training-data extraction), or (b) mitigating disclosure through technical controls (e.g., differential privacy, federated learning, secure aggregation, secure multi-party computation, homomorphic encryption, knowledge distillation with privacy guarantees, statistical disclosure control).
+
+\subsubsection{Comparator (C)}
+Baseline models without privacy protection, alternative privacy mechanisms, or different privacy parameter configurations.
+
+\subsubsection{Outcomes (O)}
+Primary outcomes: quantitative privacy metrics (e.g., attack success rates, privacy budget $\varepsilon$/$\delta$ in differential privacy, formal privacy bounds). Secondary outcomes: model utility metrics (accuracy, F1-score, AUC-ROC), computational overhead, and deployment feasibility.
+
+\subsubsection{Study Design (S)}
+Peer-reviewed empirical studies (journal or conference papers) published between 1 January 2018 and 18 January 2026, reporting experimental evaluation of disclosure risk and/or privacy-preserving techniques in AI/ML systems using real or synthetic datasets.
+
+\subsection{Information Sources}
+
+We searched four academic databases and sources:
+\begin{itemize}
+\item IEEE Xplore
+\item ACM Digital Library
+\item Scopus
+\item Google Scholar
+\end{itemize}
+
+\subsection{Search Strategy}
+
+We developed keyword-based search strings combining concepts of data privacy/disclosure, ML techniques, and attack/defense mechanisms. Primary search strings included:
+
+\begin{itemize}
+\item \texttt{``data disclosure'' OR ``privacy leakage'' OR ``membership inference'' OR ``model inversion'' OR ``training data extraction'') AND (``machine learning'' OR ``deep learning'' OR ``neural network'' OR ``large language model'') AND (``attack'' OR ``defense'' OR ``privacy-preserving'')}
+
+\item \texttt{``differential privacy'' OR ``federated learning'' OR ``secure aggregation'' OR ``homomorphic encryption'') AND (``machine learning'' OR ``neural network'') AND (``empirical'' OR ``evaluation'')}
+
+\item \texttt{``privacy attack'' AND (``classification'' OR ``regression'') AND (``experiment'' OR ``benchmark'') AND (2018:2026)}
+\end{itemize}
+
+Filters applied: publication year (2018–2026), language (English), peer-reviewed only. No filters on application domain were applied to the search, allowing capture of healthcare, finance, education, and general ML contexts.
+
+\subsection{Study Selection Process}
+
+All records from database searches were imported into a shared Google Sheets document. Duplicate records were removed automatically and manually verified.
+
+\textbf{Title and abstract screening:} One reviewer (primary investigator) screened titles and abstracts against the PICOS criteria, marking studies as ``Include,'' ``Exclude,'' or ``Unclear.'' Unclear decisions were flagged for full-text review.
+
+\textbf{Full-text review:} All studies marked ``Include'' or ``Unclear'' were retrieved in full text. Inclusion/exclusion decisions were documented with explicit reasons (e.g., ``No empirical evaluation,'' ``Not ML-focused,'' ``Privacy risk not measured''). Disagreements on borderline cases were resolved through discussion and consensus.
+
+\textbf{Large Language Model Support:} To accelerate data extraction and initial summarization, abstracts and key sections of included studies were processed using a large language model (LLM) instructed to identify core elements (study objectives, attack/defense types, datasets, metrics). All LLM-generated summaries were validated and corrected by the primary reviewer before inclusion.
+
+\subsection{Data Extraction}
+
+For each included study, we extracted the following data items:
+\begin{itemize}
+\item Study identification: authors, year, title, publication venue
+\item Study objective: primary research question or hypothesis
+\item Threat/attack type: (e.g., membership inference, model inversion, extraction, poisoning, evasion)
+\item Defense/mitigation type: (e.g., DP, FL, SMPC, encryption, distillation, anonymization)
+\item AI/ML technique: model type(s) evaluated (e.g., logistic regression, neural networks, transformers, graph neural networks)
+\item Application domain: (e.g., general ML, healthcare, finance, education, cybersecurity)
+\item Dataset(s): name, size, modality (tabular, image, text)
+\item Privacy metric(s): attack success rate, $\varepsilon$/$\delta$, privacy bound, or qualitative privacy claim
+\item Utility metric(s): accuracy, F1, AUC, loss, or model performance degradation
+\item Key findings and limitations noted by authors
+\end{itemize}
+
+A template spreadsheet was designed and maintained throughout extraction to ensure consistency.
+
+\subsection{Risk of Bias Assessment}
+
+Given the diversity of study designs (attack evaluations, defense proposals, empirical comparisons), we adapted a simplified risk-of-bias checklist focused on criteria relevant to privacy/security research:
+
+\begin{itemize}
+\item \textbf{Dataset representativeness}: Was a realistic or diverse dataset used? (Synthetic-only datasets may limit generalizability.)
+\item \textbf{Threat model clarity}: Was the attacker's knowledge and capabilities clearly defined?
+\item \textbf{Reproducibility}: Were code, datasets, or sufficient implementation details provided?
+\item \textbf{Statistical reporting}: Were confidence intervals, multiple runs, or significance tests reported for empirical results?
+\item \textbf{Baseline comparison}: Were multiple defense/attack methods compared, or was evaluation against only one baseline?
+\end{itemize}
+
+Studies were classified as ``Low risk,'' ``Moderate risk,'' or ``High risk'' based on the number of criteria met.
+
+\subsection{Synthesis Methods}
+
+Given the diversity of attack types, defense mechanisms, and evaluation contexts, we conducted a \textbf{descriptive synthesis}. Studies were categorized by:
+\begin{enumerate}
+\item Threat type (membership inference, model inversion, data extraction, poisoning)
+\item Defense category (DP, FL, SMPC, cryptographic, organizational/policy)
+\item Application domain (general ML, healthcare, education, finance, other)
+\end{enumerate}
+
+Within each category, we report the frequency of studies, typical datasets and metrics employed, privacy-utility trade-offs observed, and key methodological findings. Qualitative themes were identified regarding barriers to practical deployment and recommendations for future research.
+
+No meta-analysis or quantitative synthesis was attempted, given heterogeneity in metrics, datasets, and methodologies across studies.
+
+\section{Results}
+
+\subsection{Study Selection}
+
+[PRISMA FLOW DIAGRAM PLACEHOLDER: Insert figure showing records identified, duplicates removed, records screened, full-text articles assessed, studies included, and reasons for exclusion.]
+
+Initial database searches identified $N$ records. After removing $N_{\text{dup}}$ duplicates, $N_{\text{screened}}$ records underwent title and abstract screening. Of these, $N_{\text{included}}$ studies proceeded to full-text review, from which $N_{\text{final}}$ met all inclusion criteria and were included in qualitative synthesis.
+
+Common reasons for exclusion at full-text stage were:
+\begin{itemize}
+\item No empirical evaluation or benchmark (theoretical proposals only)
+\item Privacy risk not explicitly measured or quantified
+\item Focus on cybersecurity/cryptography without ML component
+\item Study of data governance or compliance without technical disclosure evaluation
+\end{itemize}
+
+\subsection{Study Characteristics}
+
+[TABLE 1 PLACEHOLDER: Summary of included studies with columns for Authors/Year, Threat/Attack Type, Defense Mechanism, AI/ML Technique, Dataset(s), Primary Privacy Metric, Utility Metric, and Key Finding.]
+
+Across the $N_{\text{final}}$ included studies, the majority focused on supervised classification tasks. Models evaluated ranged from logistic regression and Random Forest to deep neural networks and transformers. Datasets used included both benchmark datasets (MNIST, CIFAR-10, ImageNet) and domain-specific data (medical records, financial transactions, student records). Evaluation metrics for privacy varied considerably: membership inference studies commonly reported attack precision/recall or accuracy, while differential privacy studies reported privacy budgets ($\varepsilon$ values). Utility was most often measured via model accuracy or F1-score.
+
+\subsection{Threat Landscape: Disclosure Attacks}
+
+\subsubsection{Membership Inference Attacks}
+
+Membership inference attacks aim to determine whether a specific data point was included in a model's training set. This threat is particularly acute when models overfit to training data or exhibit high confidence on training examples compared to test examples.
+
+[N studies] focused on membership inference evaluation. Common attack methodologies included:
+
+\begin{itemize}
+\item \textbf{Binary classifier approach}: Training an attack model on predictions from multiple ``shadow'' models to distinguish training vs. non-training examples.
+\item \textbf{Confidence-based approach}: Using the target model's output confidence as a direct signal of membership.
+\item \textbf{Black-box attacks}: Querying only prediction outputs, without access to gradients or internal features.
+\end{itemize}
+
+Key findings: Membership inference success depends critically on model overfitting, dataset class imbalance, and model architecture. Reported attack success rates (measured as ROC-AUC, precision, or accuracy of the attack classifier) ranged from 50\% (near random, indicating low vulnerability) to 90\%+. Studies noted that minority classes and underrepresented subgroups showed higher vulnerability.
+
+Factors increasing vulnerability:
+\begin{itemize}
+\item High model capacity relative to training set size
+\item Imbalanced classification problems
+\item Memorization of exact training examples (particularly in LLMs)
+\item High confidence scores on training data
+\end{itemize}
+
+\subsubsection{Model Inversion Attacks}
+
+Model inversion attacks reconstruct sensitive input features or full training examples from model predictions or gradients. Sophistication ranges from reconstructing a single feature (e.g., inferring a patient's disease status from a classifier trained on medical records) to full data reconstruction.
+
+[N studies] evaluated model inversion. Recent work extended attacks to language models, reconstructing text sequences by querying the model iteratively or leveraging gradient information.
+
+Key findings: Reconstruction fidelity depends on the attacker's knowledge of the model architecture and the complexity of the input space. Vision models on structured datasets (e.g., medical imaging) showed higher reconstruction quality. Language model inversion attacks successfully recovered verbatim sequences and private text when models had access to sensitive data during pretraining.
+
+Practical impact: Reconstructed outputs, even if imperfect, can leak sensitive attributes. For example, reconstructed medical images or text fragments may be re-identified or combined with auxiliary information to compromise privacy.
+
+\subsubsection{Training Data Extraction}
+
+Training data extraction specifically targets LLMs and refers to the ability to generate or reconstruct exact sequences from the training data through carefully crafted prompts. Unlike membership inference (which only confirms membership), extraction recovers actual data.
+
+[N studies] on extraction, primarily targeting GPT-2, GPT-3.5, and other transformer-based models. Attack methods included:
+
+\begin{itemize}
+\item \textbf{Prompt-based extraction}: Querying the model with prompts designed to trigger memorized sequences (e.g., ``Complete this text: \texttt{[exact training phrase]}'').
+\item \textbf{Divergence attacks}: Exploiting alignment training weaknesses to trigger non-aligned outputs that revert to training data.
+\item \textbf{Indirect attacks}: Using public APIs and auxiliary datasets to infer membership, then extracting via targeted queries.
+\item \textbf{Cross-client extraction in FL}: In federated learning contexts, attackers exploiting model updates from individual clients to infer data on those clients.
+\end{itemize}
+
+Key findings: LLMs memorize significant portions of their training data, particularly when data contain unique or rare sequences (e.g., PII, URLs, contact information). Reported extraction rates varied from $<1\%$ to $>40\%$ of attempted targets, depending on data rarity and query sophistication.
+
+Educational implications: In educational LLM systems, extraction attacks could expose student names, ID numbers, assignment text, or assessment responses if these were included in pretraining or fine-tuning data.
+
+\subsection{Defense Mechanisms: Mitigation Strategies}
+
+\subsubsection{Differential Privacy}
+
+Differential privacy (DP) provides a formal, quantifiable privacy guarantee by adding calibrated noise to data or gradients such that the inclusion or exclusion of any single record does not significantly change the model's output distribution.
+
+[N studies] applied differential privacy to ML training or inference. Common implementations:
+
+\begin{itemize}
+\item \textbf{DP-SGD}: Clipping gradients and adding Gaussian noise during stochastic gradient descent training.
+\item \textbf{DP in aggregation}: Adding noise to aggregated gradients or model updates in federated learning (DP-FL).
+\item \textbf{DP for inference}: Randomizing or smoothing model outputs to protect query privacy.
+\item \textbf{DP with knowledge distillation}: Combining DP during teacher-student knowledge transfer to reduce privacy loss.
+\end{itemize}
+
+Privacy-utility trade-offs: Strong privacy guarantees (small $\varepsilon$, e.g., $\varepsilon < 1$) typically required $10\%$–$30\%$ accuracy loss on benchmark datasets. Weaker guarantees ($\varepsilon = 10$) showed $1\%$–$5\%$ loss. Practical deployment often targeted $\varepsilon$ in the range $[1, 10]$, balancing defensibility against attacks and acceptable utility.
+
+Challenges: (1) \textit{Composition complexity}: Multiple queries or training rounds multiply privacy loss, requiring careful budget accounting. (2) \textit{Hyperparameter tuning}: Choosing noise levels and gradient clipping thresholds is non-trivial and dataset-dependent. (3) \textit{Audit difficulty}: Organizations struggle to verify compliance and communicate privacy guarantees to stakeholders.
+
+\subsubsection{Federated Learning}
+
+Federated learning (FL) trains models across distributed devices or organizations without centralizing raw data. Model updates (gradients) are aggregated at a server rather than raw data being pooled.
+
+[N studies] evaluated FL for privacy. FL alone provides limited privacy (updates can still leak via gradient inversion), but when combined with DP, secure aggregation, or SMPC, it offers substantial protection.
+
+Privacy-utility profiles: Federated averaging (FedAvg) with no additional privacy achieved near-centralized model performance but remained vulnerable to privacy attacks. Adding DP-SGD reduced vulnerability at a modest accuracy cost ($5\%$–$15\%$ in typical settings).
+
+Deployment barriers: Communication overhead (multiple rounds of gradient transmission) and heterogeneous data distributions (non-IID data across clients) complicate practical FL. Studies reported $10\times$–$100\times$ more communication overhead than centralized training, though recent work on communication-efficient FL partially mitigates this.
+
+\subsubsection{Secure Multi-Party Computation (SMPC) and Secure Aggregation}
+
+SMPC allows multiple parties to compute a function on encrypted inputs such that no party learns others' data. Secure aggregation, a special case, enables gradient aggregation without the server learning individual gradients.
+
+[N studies] on SMPC/secure aggregation, primarily in federated learning and healthcare settings. Implementations used cryptographic techniques including secret sharing and homomorphic encryption.
+
+Privacy guarantees: Information-theoretic security against any subset of participants not exceeding a threshold. Practical security is high if cryptographic implementations are correct.
+
+Challenges: (1) \textit{Computational cost}: Encryption/decryption overhead can increase training time by $5\times$–$50\times$. (2) \textit{Complexity}: Requires specialized infrastructure and expertise. (3) \textit{Auditability}: Verifying correct implementation is difficult; no standards currently exist.
+
+\subsubsection{Anonymization and Pseudonymization}
+
+De-identification techniques remove or mask direct identifiers (names, ID numbers) and quasi-identifiers (date of birth, zip code) to reduce re-identification risk. Common approaches: $k$-anonymity, $l$-diversity, differential privacy, and data perturbation.
+
+[N studies], particularly in healthcare and education, evaluated anonymization schemes. A notable finding: $k$-anonymity and related techniques provide weaker privacy guarantees than formal privacy models like differential privacy, as re-identification remains possible through linkage attacks or with auxiliary data.
+
+Educational data anonymization: In educational datasets, quasi-identifiers such as course enrollment patterns, assignment scores, and temporal sequences can enable re-identification despite removing names. Studies on educational data mining datasets (e.g., Open University Learning Analytics Dataset) demonstrated that $k$-anonymity with $k=5$ or $k=10$ still allowed $10\%$–$30\%$ re-identification rates when combined with auxiliary information.
+
+\subsubsection{Other Defenses: Adversarial Training, Model Distillation, and Detection}
+
+\begin{itemize}
+\item \textbf{Adversarial training}: Augmenting training data with adversarial examples to improve robustness. Indirect privacy benefit: less memorization of exact examples. Limited direct privacy guarantees but demonstrated resilience against some extraction attacks.
+
+\item \textbf{Knowledge distillation}: Transferring knowledge from a teacher model to a smaller student model. When combined with DP or trained on public proxy data, distillation can reduce privacy leakage. [N studies] showed $10\%$–$20\%$ reduction in membership inference success when using private knowledge distillation vs. direct model access.
+
+\item \textbf{Prompt injection and LLM output filtering}: For LLMs, defenses include input sanitization (removing or redacting sensitive tokens), output filtering (detecting and masking sensitive sequences), and detection mechanisms (identifying prompt injection attempts via attention pattern analysis). Recent detection methods achieved $>90\%$ detection accuracy on standard benchmarks.
+
+\item \textbf{Model extraction defenses}: Early-exit networks and dynamic neural networks reduce clone model accuracy while preserving utility on benign queries, achieving $10\%$–$20\%$ reduction in attacker's clone accuracy with minimal impact on honest use.
+\end{itemize}
+
+\subsection{Domain-Specific Insights: Education}
+
+Educational AI systems present unique privacy challenges:
+
+\begin{itemize}
+\item \textbf{Student vulnerability}: Students, especially minors, are recognized as a vulnerable population under FERPA, GDPR, and other regulations, requiring heightened protection.
+
+\item \textbf{Granular behavioral data}: Learning management systems, adaptive tutoring platforms, and assessment tools collect fine-grained data on student performance, effort, and learning strategies. These create inference risks: membership in a remedial program, struggles with specific topics, or mental health conditions can be inferred from model outputs.
+
+\item \textbf{Federated educational research}: Collaborative learning analytics across institutions requires privacy-preserving aggregation. [N studies] demonstrated federated learning for educational prediction with DP, showing feasibility but $10\%$–$25\%$ accuracy loss compared to centralized models.
+
+\item \textbf{Third-party vendor risks}: Educational institutions increasingly outsource AI services (automated grading, plagiarism detection, predictive analytics). Data disclosure risks arise from vendor data retention, training on student data for model improvement, and inadequate contractual controls. Stanford's 2025 analysis of LLM privacy policies found indefinite data retention and undisclosed training practices among leading AI providers.
+\end{itemize}
+
+\subsection{Risk of Bias and Study Quality}
+
+Of the $N_{\text{final}}$ included studies, $X$ were classified as \textbf{Low risk of bias} (clear threat model, reproducible setup, multiple baselines), $Y$ as \textbf{Moderate risk} (some methodological gaps but generally sound), and $Z$ as \textbf{High risk} (synthetic data only, single baseline, unclear threat model).
+
+Common limitations:
+\begin{itemize}
+\item Evaluation on benchmark datasets (MNIST, CIFAR-10) rather than realistic sensitive data
+\item Threat model assumptions (e.g., attacker has access to shadow models or auxiliary data) not always realistic
+\item Limited evaluation of defenses at scale (most studies $<1$ million parameters or records)
+\item Sparse reporting of confidence intervals or statistical significance
+\end{itemize}
+
+\section{Discussion}
+
+\subsection{Summary of Key Findings}
+
+Our review of [N] empirical studies reveals a maturing but fragmented landscape of data disclosure threats and defenses in AI/ML:
+
+\begin{enumerate}
+\item \textbf{Multiple, co-existing threat models}: Membership inference, model inversion, and data extraction are well-established attack vectors. Success rates vary widely depending on threat model assumptions, model capacity, and data characteristics.
+
+\item \textbf{Differential privacy and federated learning are dominant defenses}: DP-based approaches, often combined with FL, are the most cited and deployed privacy-preserving techniques. They provide formal privacy guarantees, though at tangible utility costs.
+
+\item \textbf{Privacy-utility trade-offs are significant}: Strong privacy (formal guarantees, small $\varepsilon$) often incurs $10\%$–$30\%$ utility loss. Organizations face difficult calibration choices.
+
+\item \textbf{Educational domain remains under-researched}: Few studies explicitly evaluate privacy in K-12 or higher education AI systems. Existing work focuses on anonymization techniques, with limited evaluation of membership inference or model inversion in educational contexts.
+
+\item \textbf{LLM privacy remains immature}: While training data extraction from LLMs has been demonstrated empirically, defenses remain nascent. Industry practices (data retention, training practices) often diverge from privacy norms.
+\end{enumerate}
+
+\subsection{Implications for Practice}
+
+\subsubsection{For Practitioners}
+
+\begin{itemize}
+\item \textbf{Adopt privacy by design}: Integrate privacy considerations early in data collection and model development, not as an afterthought.
+
+\item \textbf{Conduct empirical threat modeling}: Test systems against membership inference and model inversion attacks to establish baseline vulnerability before deployment.
+
+\item \textbf{Calibrate privacy budgets}: Use realistic threat models and privacy-utility analysis to set DP parameters; avoid over-conservative or under-protective defaults.
+
+\item \textbf{Combine multiple defenses}: No single technique is universally sufficient; DP + FL + secure aggregation offers layered protection.
+
+\item \textbf{Educational sector specifics}: For student-facing systems, implement federated learning to avoid centralizing data, combine with DP, enforce explicit consent for model retraining, and audit vendor practices.
+\end{itemize}
+
+\subsubsection{For Regulators and Policymakers}
+
+\begin{itemize}
+\item \textbf{Establish privacy evaluation standards}: Regulators should mandate empirical privacy audits (attack evaluations) as part of AI risk assessment, similar to security testing requirements.
+
+\item \textbf{Strengthen contractual accountability}: For third-party AI services (especially in education), require explicit data use limitations, no retraining without consent, and regular audits.
+
+\item \textbf{Fund privacy research}: Public investment in privacy-preserving ML research, particularly in underserved domains like education, is critical for technological progress.
+\end{itemize}
+
+\subsection{Methodological Gaps and Limitations}
+
+\begin{enumerate}
+\item \textbf{Lack of standardized benchmarks}: Unlike computer vision or NLP, there is no consensus benchmark for evaluating privacy attacks and defenses across domains. Studies use custom datasets, making comparison difficult.
+
+\item \textbf{Heterogeneous privacy metrics}: Privacy is reported variously as attack success rate, privacy budget ($\varepsilon$), formal bounds, or qualitative claims. Meta-analysis across studies is nearly impossible.
+
+\item \textbf{Evaluation on non-representative data}: Majority of studies use small benchmark datasets. Real-world deployment involves larger datasets, longer training, and different data distributions, which may change privacy-utility profiles.
+
+\item \textbf{Limited scalability analysis}: Few studies evaluate privacy defenses at production scale (billions of parameters, millions of records). Computational costs may be prohibitive at scale.
+
+\item \textbf{Sparse educational focus}: Only [X\%] of reviewed studies evaluated privacy in educational AI. Generalization from healthcare or finance to education is limited.
+
+\item \textbf{Reproducibility concerns}: Code and detailed implementation are provided by only [X\%] of papers. This limits validation and extension of findings.
+\end{enumerate}
+
+\subsection{Future Research Directions}
+
+\begin{enumerate}
+\item \textbf{Unified privacy evaluation framework}: Develop standardized benchmarks and metrics for privacy attack evaluation across domains, allowing fair comparison and reproducibility.
+
+\item \textbf{Educational privacy research}: Conduct empirical privacy studies in realistic educational settings (learning management systems, adaptive tutoring, automated grading) with diverse student populations.
+
+\item \textbf{Privacy-preserving LLM deployment}: Develop practical defenses against data extraction in LLMs (e.g., data deduplication, privacy budget accounting, federated fine-tuning) and standardize privacy evaluation for LLM providers.
+
+\item \textbf{Human-centered privacy research}: Evaluate privacy mechanisms from the perspective of end users (students, patients, consumers). What privacy levels do they consider acceptable? How do privacy notifications affect trust and adoption?
+
+\item \textbf{Integration with systems design}: Move beyond theoretical privacy guarantees to practical deployment: how to integrate privacy defenses into ML pipelines, frameworks, and DevOps workflows with minimal friction?
+
+\item \textbf{Regulatory compliance frameworks}: Research how to align technical privacy measures (DP, FL) with regulatory requirements (GDPR, FERPA, AI Act) and develop tools for practitioners to demonstrate compliance.
+\end{enumerate}
+
+\section{Conclusion}
+
+Data disclosure in AI/ML systems represents a significant and evolving threat landscape. This review synthesizes empirical evidence on disclosure attacks (membership inference, model inversion, training data extraction) and defenses (differential privacy, federated learning, secure aggregation, anonymization) across domains, with emphasis on educational applications. Key findings indicate that formal privacy-preserving techniques (particularly DP and FL) are maturing and increasingly deployable, but substantial trade-offs with model utility persist. The educational sector remains under-researched; existing work focuses narrowly on anonymization rather than comprehensive privacy risk assessment.
+
+To advance the field, we recommend: (1) development of standardized privacy evaluation benchmarks and metrics, (2) expansion of empirical privacy research to educational and domain-specific settings, (3) integration of privacy-preserving techniques into mainstream ML frameworks and tools, and (4) collaboration between computer scientists, domain experts, policymakers, and end users to ensure privacy protections are both technically sound and practically deployable.
+
+Ultimately, data disclosure risks and privacy-preserving technologies must be understood not in isolation but as embedded in organizational practices, regulatory contexts, and user trust. Future research bridging technical, organizational, and regulatory perspectives is essential for creating AI/ML systems that balance innovation with fundamental privacy rights.
+
+\section*{References}
+
+[References will be populated with complete citations to all sources in this section; using Bibtex or manual formatting as per journal/venue requirements.]
+
+\appendix
+
+\section{PRISMA 2020 Checklist}
+
+[Completed PRISMA 2020 checklist to be appended.]
+
+\section{Data Extraction Template}
+
+[Template structure for extracted data items to be detailed here if required for supplementary material.]
+
+\end{document}

@@ -1,0 +1,1655 @@
+{
+  "metrics": {
+    "overall_accuracy": 0.667,
+    "correct_predictions": 28,
+    "total_samples": 42,
+    "class_metrics": {
+      "none": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1_score": 0.857,
+        "support": 8
+      },
+      "conceptual_error": {
+        "precision": 0.333,
+        "recall": 0.091,
+        "f1_score": 0.143,
+        "support": 11
+      },
+      "missing_key_concepts": {
+        "precision": 0.4,
+        "recall": 0.8,
+        "f1_score": 0.533,
+        "support": 10
+      },
+      "linguistic_error": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 7
+      },
+      "vague_answer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 6
+      }
+    }
+  },
+  "predictions": [
+    {
+      "index": 0,
+      "question_id": "Q1",
+      "student_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and release oxygen. This happens in the chloroplasts of plant cells.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.59,
+        "explanation": "Answer demonstrates good understanding with adequate coverage of key concepts."
+      },
+      "similarity": 0.968,
+      "features": {
+        "word_count": 27,
+        "keyword_coverage": 0.6111111111111112,
+        "num_missing_keywords": 7,
+        "missing_keywords": [
+          "light",
+          "mainly",
+          "energy",
+          "leaves",
+          "chlorophyll",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 1,
+      "question_id": "Q1",
+      "student_answer": "Plants use light to convert water and CO2 into sugar and oxygen through photosynthesis, which takes place in their leaves.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.43,
+        "explanation": "Low keyword coverage (39%). Missing key concepts: carbon, produce, mainly, energy, sunlight."
+      },
+      "similarity": 0.857,
+      "features": {
+        "word_count": 20,
+        "keyword_coverage": 0.3888888888888889,
+        "num_missing_keywords": 11,
+        "missing_keywords": [
+          "carbon",
+          "produce",
+          "mainly",
+          "energy",
+          "sunlight",
+          "glucose",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 1,
+        "misspelled_words": [
+          "co2"
+        ],
+        "spelling_error_ratio": 0.05555555555555555
+      }
+    },
+    {
+      "index": 2,
+      "question_id": "Q1",
+      "student_answer": "Photosynthesis is when plants eat sunlight to grow bigger.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.98,
+        "explanation": "Low keyword coverage (17%). Missing key concepts: carbon, produce, light, mainly, use."
+      },
+      "similarity": 0.781,
+      "features": {
+        "word_count": 9,
+        "keyword_coverage": 0.16666666666666666,
+        "num_missing_keywords": 15,
+        "missing_keywords": [
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 3,
+      "question_id": "Q1",
+      "student_answer": "Its how plants breathe and eat at the same time using the sun.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (6%). Missing key concepts: photosynthesis, carbon, produce, light, mainly."
+      },
+      "similarity": 0.581,
+      "features": {
+        "word_count": 13,
+        "keyword_coverage": 0.05555555555555555,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 4,
+      "question_id": "Q1",
+      "student_answer": "Plants absorb sunlight through their leaves and this gives them energy to live, like how we eat food.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.84,
+        "explanation": "Low keyword coverage (22%). Missing key concepts: photosynthesis, carbon, produce, light, mainly."
+      },
+      "similarity": 0.663,
+      "features": {
+        "word_count": 18,
+        "keyword_coverage": 0.2222222222222222,
+        "num_missing_keywords": 14,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 5,
+      "question_id": "Q1",
+      "student_answer": "Plants use light to make food.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.98,
+        "explanation": "Low keyword coverage (17%). Missing key concepts: photosynthesis, carbon, produce, mainly, energy."
+      },
+      "similarity": 0.618,
+      "features": {
+        "word_count": 6,
+        "keyword_coverage": 0.16666666666666666,
+        "num_missing_keywords": 15,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "mainly",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 6,
+      "question_id": "Q1",
+      "student_answer": "It is a process in the leaves where plants make glucose.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.84,
+        "explanation": "Low keyword coverage (22%). Missing key concepts: photosynthesis, carbon, produce, light, mainly."
+      },
+      "similarity": 0.686,
+      "features": {
+        "word_count": 11,
+        "keyword_coverage": 0.2222222222222222,
+        "num_missing_keywords": 14,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "sunlight",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 7,
+      "question_id": "Q1",
+      "student_answer": "Plants take in light and release oxygen through this process.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.84,
+        "explanation": "Low keyword coverage (22%). Missing key concepts: photosynthesis, carbon, produce, mainly, use."
+      },
+      "similarity": 0.736,
+      "features": {
+        "word_count": 10,
+        "keyword_coverage": 0.2222222222222222,
+        "num_missing_keywords": 14,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 8,
+      "question_id": "Q1",
+      "student_answer": "Photosinthesis is a proces where plants makes sugar and oxigen using lite.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: proces, oxigen, photosinthesis. Additionally detected: missing_key_concepts."
+      },
+      "similarity": 0.678,
+      "features": {
+        "word_count": 12,
+        "keyword_coverage": 0.05555555555555555,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 3,
+        "misspelled_words": [
+          "proces",
+          "oxigen",
+          "photosinthesis"
+        ],
+        "spelling_error_ratio": 0.3
+      }
+    },
+    {
+      "index": 9,
+      "question_id": "Q1",
+      "student_answer": "Photosynthisis hapens wen plants use sunlite to produse glucos.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: produse, photosynthisis, sunlite, hapens, glucos. Additionally detected: missing_key_concepts."
+      },
+      "similarity": 0.675,
+      "features": {
+        "word_count": 9,
+        "keyword_coverage": 0.1111111111111111,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 5,
+        "misspelled_words": [
+          "produse",
+          "photosynthisis",
+          "sunlite",
+          "hapens",
+          "glucos"
+        ],
+        "spelling_error_ratio": 0.625
+      }
+    },
+    {
+      "index": 10,
+      "question_id": "Q1",
+      "student_answer": "Plants make food.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 0.9,
+        "explanation": "Response is too short (3 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.516,
+      "features": {
+        "word_count": 3,
+        "keyword_coverage": 0.05555555555555555,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "carbon",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "process",
+          "photosynthesis",
+          "produce",
+          "chlorophyll",
+          "dioxide",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 11,
+      "question_id": "Q1",
+      "student_answer": "Its about plants.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 0.9,
+        "explanation": "Response is too short (3 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.441,
+      "features": {
+        "word_count": 3,
+        "keyword_coverage": 0.05555555555555555,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "carbon",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "process",
+          "photosynthesis",
+          "produce",
+          "chlorophyll",
+          "dioxide",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 12,
+      "question_id": "Q2",
+      "student_answer": "The water cycle has four stages: evaporation where water becomes vapor, condensation where clouds form, precipitation where rain falls, and collection where water gathers in oceans and rivers.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.58,
+        "explanation": "Answer demonstrates good understanding with adequate coverage of key concepts."
+      },
+      "similarity": 0.925,
+      "features": {
+        "word_count": 28,
+        "keyword_coverage": 0.631578947368421,
+        "num_missing_keywords": 7,
+        "missing_keywords": [
+          "turns",
+          "lakes",
+          "consists",
+          "underground",
+          "snow",
+          "bodies",
+          "forms"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 13,
+      "question_id": "Q2",
+      "student_answer": "Water evaporates from the ocean, rises up to form clouds through condensation, then falls back as rain or snow, and collects in lakes and rivers.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.48,
+        "explanation": "Low keyword coverage (37%). Missing key concepts: turns, precipitation, consists, underground, gathers."
+      },
+      "similarity": 0.733,
+      "features": {
+        "word_count": 25,
+        "keyword_coverage": 0.3684210526315789,
+        "num_missing_keywords": 12,
+        "missing_keywords": [
+          "turns",
+          "precipitation",
+          "consists",
+          "underground",
+          "gathers",
+          "cycle",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 14,
+      "question_id": "Q2",
+      "student_answer": "The water cycle is how water moves around the earth through different phases like gas and liquid.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (11%). Missing key concepts: turns, condensation, precipitation, lakes, rain."
+      },
+      "similarity": 0.771,
+      "features": {
+        "word_count": 17,
+        "keyword_coverage": 0.10526315789473684,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "turns",
+          "condensation",
+          "precipitation",
+          "lakes",
+          "rain",
+          "underground",
+          "gathers",
+          "consists",
+          "snow",
+          "clouds",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 15,
+      "question_id": "Q2",
+      "student_answer": "Water gets heated by the sun and then turns into ice which goes up into the sky.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "conceptual_error",
+        "confidence": 0.52,
+        "explanation": "Low semantic similarity (0.54) indicates incorrect or confused understanding of the concept."
+      },
+      "similarity": 0.538,
+      "features": {
+        "word_count": 17,
+        "keyword_coverage": 0.10526315789473684,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "condensation",
+          "precipitation",
+          "lakes",
+          "rain",
+          "underground",
+          "gathers",
+          "consists",
+          "cycle",
+          "snow",
+          "clouds",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 16,
+      "question_id": "Q2",
+      "student_answer": "Rain comes from clouds and goes into rivers. Then it goes back up somehow.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (11%). Missing key concepts: turns, condensation, precipitation, lakes, consists."
+      },
+      "similarity": 0.555,
+      "features": {
+        "word_count": 14,
+        "keyword_coverage": 0.10526315789473684,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "turns",
+          "condensation",
+          "precipitation",
+          "lakes",
+          "consists",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "water",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 17,
+      "question_id": "Q2",
+      "student_answer": "Evaporation, condensation, precipitation.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (16%). Missing key concepts: lakes, underground, gathers, cycle, snow. Additionally detected: vague_answer."
+      },
+      "similarity": 0.608,
+      "features": {
+        "word_count": 3,
+        "keyword_coverage": 0.15789473684210525,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "lakes",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "water",
+          "oceans",
+          "forms",
+          "collection",
+          "turns",
+          "rain",
+          "consists",
+          "clouds",
+          "vapor",
+          "bodies",
+          "falls"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 18,
+      "question_id": "Q2",
+      "student_answer": "Water goes up and then comes down as rain.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "conceptual_error",
+        "confidence": 0.55,
+        "explanation": "Low semantic similarity (0.52) indicates incorrect or confused understanding of the concept."
+      },
+      "similarity": 0.524,
+      "features": {
+        "word_count": 9,
+        "keyword_coverage": 0.10526315789473684,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "turns",
+          "condensation",
+          "precipitation",
+          "lakes",
+          "consists",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "clouds",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 19,
+      "question_id": "Q2",
+      "student_answer": "The stages include evaporation and rain falling from clouds.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (16%). Missing key concepts: turns, condensation, precipitation, lakes, consists."
+      },
+      "similarity": 0.618,
+      "features": {
+        "word_count": 9,
+        "keyword_coverage": 0.15789473684210525,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "turns",
+          "condensation",
+          "precipitation",
+          "lakes",
+          "consists",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "water",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 20,
+      "question_id": "Q2",
+      "student_answer": "The watter cicle has evapuration, condinsation, and percipitation as its maine stages.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: evapuration, watter, cicle, condinsation, percipitation. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.279,
+      "features": {
+        "word_count": 12,
+        "keyword_coverage": 0.0,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "gathers",
+          "snow",
+          "water",
+          "oceans",
+          "forms",
+          "collection",
+          "turns",
+          "rain",
+          "clouds",
+          "vapor",
+          "precipitation",
+          "lakes",
+          "underground",
+          "cycle",
+          "condensation",
+          "consists",
+          "bodies",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 5,
+        "misspelled_words": [
+          "evapuration",
+          "watter",
+          "cicle",
+          "condinsation",
+          "percipitation"
+        ],
+        "spelling_error_ratio": 0.45454545454545453
+      }
+    },
+    {
+      "index": 21,
+      "question_id": "Q2",
+      "student_answer": "Evaperation occures when watter heats up and condansation makes cloudes.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: watter, evaperation, occures, cloudes, condansation. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.341,
+      "features": {
+        "word_count": 10,
+        "keyword_coverage": 0.0,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "gathers",
+          "snow",
+          "water",
+          "oceans",
+          "forms",
+          "collection",
+          "turns",
+          "rain",
+          "clouds",
+          "vapor",
+          "precipitation",
+          "lakes",
+          "underground",
+          "cycle",
+          "condensation",
+          "consists",
+          "bodies",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 5,
+        "misspelled_words": [
+          "watter",
+          "evaperation",
+          "occures",
+          "cloudes",
+          "condansation"
+        ],
+        "spelling_error_ratio": 0.5555555555555556
+      }
+    },
+    {
+      "index": 22,
+      "question_id": "Q2",
+      "student_answer": "Water moves around.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 0.9,
+        "explanation": "Response is too short (3 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.4,
+      "features": {
+        "word_count": 3,
+        "keyword_coverage": 0.05263157894736842,
+        "num_missing_keywords": 18,
+        "missing_keywords": [
+          "precipitation",
+          "lakes",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "oceans",
+          "forms",
+          "collection",
+          "turns",
+          "condensation",
+          "rain",
+          "consists",
+          "clouds",
+          "vapor",
+          "bodies",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 23,
+      "question_id": "Q2",
+      "student_answer": "It rains.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 1.0,
+        "explanation": "Response is too short (2 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.415,
+      "features": {
+        "word_count": 2,
+        "keyword_coverage": 0.0,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "precipitation",
+          "lakes",
+          "underground",
+          "gathers",
+          "cycle",
+          "snow",
+          "water",
+          "oceans",
+          "forms",
+          "collection",
+          "turns",
+          "condensation",
+          "rain",
+          "consists",
+          "clouds",
+          "vapor",
+          "bodies",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 24,
+      "question_id": "Q3",
+      "student_answer": "Mitosis creates two identical cells with the full chromosome count for growth and repair, while meiosis creates four different cells with half the chromosomes for reproduction.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.46,
+        "explanation": "Answer demonstrates good understanding with adequate coverage of key concepts."
+      },
+      "similarity": 0.843,
+      "features": {
+        "word_count": 26,
+        "keyword_coverage": 0.55,
+        "num_missing_keywords": 9,
+        "missing_keywords": [
+          "number",
+          "genetically",
+          "produces",
+          "parent",
+          "producing",
+          "cell",
+          "division",
+          "sex",
+          "daughter"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 25,
+      "question_id": "Q3",
+      "student_answer": "In mitosis, a cell divides to make two copies of itself for the body to grow. In meiosis, a cell divides twice to make four sex cells with half the DNA.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.86,
+        "explanation": "Answer demonstrates understanding of the concept."
+      },
+      "similarity": 0.862,
+      "features": {
+        "word_count": 31,
+        "keyword_coverage": 0.4,
+        "num_missing_keywords": 12,
+        "missing_keywords": [
+          "number",
+          "chromosomes",
+          "growth",
+          "identical",
+          "genetically",
+          "produces",
+          "parent",
+          "different",
+          "producing",
+          "repair",
+          "division",
+          "daughter"
+        ],
+        "num_spelling_errors": 1,
+        "misspelled_words": [
+          "dna"
+        ],
+        "spelling_error_ratio": 0.043478260869565216
+      }
+    },
+    {
+      "index": 26,
+      "question_id": "Q3",
+      "student_answer": "Both mitosis and meiosis are basically the same thing, they both split cells in half.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.9,
+        "explanation": "Low keyword coverage (20%). Missing key concepts: number, chromosomes, growth, identical, genetically."
+      },
+      "similarity": 0.769,
+      "features": {
+        "word_count": 15,
+        "keyword_coverage": 0.2,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "number",
+          "chromosomes",
+          "growth",
+          "identical",
+          "genetically",
+          "produces",
+          "two",
+          "parent",
+          "different",
+          "producing",
+          "cell",
+          "four",
+          "repair",
+          "division",
+          "sex",
+          "daughter"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 27,
+      "question_id": "Q3",
+      "student_answer": "Mitosis is for making sex cells and meiosis is for growing the body.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.9,
+        "explanation": "Low keyword coverage (20%). Missing key concepts: number, chromosomes, growth, identical, genetically."
+      },
+      "similarity": 0.817,
+      "features": {
+        "word_count": 13,
+        "keyword_coverage": 0.2,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "number",
+          "chromosomes",
+          "growth",
+          "identical",
+          "genetically",
+          "produces",
+          "two",
+          "parent",
+          "different",
+          "producing",
+          "cell",
+          "four",
+          "repair",
+          "division",
+          "daughter",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 28,
+      "question_id": "Q3",
+      "student_answer": "Meiosis doubles the chromosomes while mitosis keeps them the same.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (15%). Missing key concepts: number, genetically, growth, identical, cells."
+      },
+      "similarity": 0.778,
+      "features": {
+        "word_count": 10,
+        "keyword_coverage": 0.15,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "number",
+          "genetically",
+          "growth",
+          "identical",
+          "cells",
+          "produces",
+          "two",
+          "parent",
+          "different",
+          "producing",
+          "cell",
+          "four",
+          "repair",
+          "division",
+          "sex",
+          "daughter",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 29,
+      "question_id": "Q3",
+      "student_answer": "Mitosis makes two cells and meiosis makes four cells.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.78,
+        "explanation": "Low keyword coverage (25%). Missing key concepts: number, chromosomes, growth, identical, genetically."
+      },
+      "similarity": 0.789,
+      "features": {
+        "word_count": 9,
+        "keyword_coverage": 0.25,
+        "num_missing_keywords": 15,
+        "missing_keywords": [
+          "number",
+          "chromosomes",
+          "growth",
+          "identical",
+          "genetically",
+          "produces",
+          "parent",
+          "different",
+          "producing",
+          "cell",
+          "repair",
+          "division",
+          "sex",
+          "daughter",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 30,
+      "question_id": "Q3",
+      "student_answer": "One is for body cells and one is for reproduction.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "conceptual_error",
+        "confidence": 0.68,
+        "explanation": "Low semantic similarity (0.45) indicates incorrect or confused understanding of the concept."
+      },
+      "similarity": 0.454,
+      "features": {
+        "word_count": 10,
+        "keyword_coverage": 0.05,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "produces",
+          "different",
+          "meiosis",
+          "chromosomes",
+          "growth",
+          "two",
+          "parent",
+          "repair",
+          "division",
+          "half",
+          "identical",
+          "producing",
+          "four",
+          "sex",
+          "daughter",
+          "number",
+          "genetically",
+          "mitosis",
+          "cell"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 31,
+      "question_id": "Q3",
+      "student_answer": "They are both types of cell division with different numbers of resulting cells.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.9,
+        "explanation": "Low keyword coverage (20%). Missing key concepts: number, chromosomes, growth, identical, genetically."
+      },
+      "similarity": 0.571,
+      "features": {
+        "word_count": 13,
+        "keyword_coverage": 0.2,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "number",
+          "chromosomes",
+          "growth",
+          "identical",
+          "genetically",
+          "mitosis",
+          "produces",
+          "two",
+          "parent",
+          "producing",
+          "meiosis",
+          "four",
+          "repair",
+          "sex",
+          "daughter",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 32,
+      "question_id": "Q3",
+      "student_answer": "Mytosis produses two sels and meosis produses for sels with les cromosomes.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: produses, mytosis, meosis, sels, cromosomes. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.388,
+      "features": {
+        "word_count": 12,
+        "keyword_coverage": 0.05,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "cells",
+          "produces",
+          "different",
+          "meiosis",
+          "chromosomes",
+          "growth",
+          "parent",
+          "repair",
+          "division",
+          "half",
+          "identical",
+          "producing",
+          "four",
+          "sex",
+          "daughter",
+          "number",
+          "genetically",
+          "mitosis",
+          "cell"
+        ],
+        "num_spelling_errors": 5,
+        "misspelled_words": [
+          "produses",
+          "mytosis",
+          "meosis",
+          "sels",
+          "cromosomes"
+        ],
+        "spelling_error_ratio": 0.4166666666666667
+      }
+    },
+    {
+      "index": 33,
+      "question_id": "Q3",
+      "student_answer": "Mitoesis is fore groth and meioesis is fore reproduktion in liveing organismes.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: organismes, mitoesis, reproduktion, groth, liveing. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.502,
+      "features": {
+        "word_count": 12,
+        "keyword_coverage": 0.0,
+        "num_missing_keywords": 20,
+        "missing_keywords": [
+          "cells",
+          "produces",
+          "different",
+          "meiosis",
+          "chromosomes",
+          "growth",
+          "two",
+          "parent",
+          "repair",
+          "division",
+          "half",
+          "identical",
+          "producing",
+          "four",
+          "sex",
+          "daughter",
+          "number",
+          "genetically",
+          "mitosis",
+          "cell"
+        ],
+        "num_spelling_errors": 6,
+        "misspelled_words": [
+          "organismes",
+          "mitoesis",
+          "reproduktion",
+          "groth",
+          "liveing",
+          "meioesis"
+        ],
+        "spelling_error_ratio": 0.6666666666666666
+      }
+    },
+    {
+      "index": 34,
+      "question_id": "Q3",
+      "student_answer": "They're different.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 1.0,
+        "explanation": "Response is too short (2 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.006,
+      "features": {
+        "word_count": 2,
+        "keyword_coverage": 0.05,
+        "num_missing_keywords": 19,
+        "missing_keywords": [
+          "identical",
+          "cells",
+          "produces",
+          "producing",
+          "meiosis",
+          "four",
+          "sex",
+          "daughter",
+          "number",
+          "chromosomes",
+          "growth",
+          "genetically",
+          "mitosis",
+          "two",
+          "parent",
+          "cell",
+          "repair",
+          "division",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 35,
+      "question_id": "Q3",
+      "student_answer": "Cell division.",
+      "ground_truth": "vague_answer",
+      "prediction": {
+        "predicted_error_type": "vague_answer",
+        "confidence": 1.0,
+        "explanation": "Response is too short (2 words). Lacks sufficient detail to demonstrate understanding. Additionally detected: missing_key_concepts."
+      },
+      "similarity": 0.578,
+      "features": {
+        "word_count": 2,
+        "keyword_coverage": 0.1,
+        "num_missing_keywords": 18,
+        "missing_keywords": [
+          "identical",
+          "cells",
+          "produces",
+          "different",
+          "producing",
+          "meiosis",
+          "four",
+          "sex",
+          "daughter",
+          "number",
+          "chromosomes",
+          "growth",
+          "genetically",
+          "mitosis",
+          "two",
+          "parent",
+          "repair",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 36,
+      "question_id": "Q1",
+      "student_answer": "Photosynthesis is a chemical process in which chlorophyll in plant leaves absorbs sunlight to convert carbon dioxide and water into glucose, releasing oxygen as a byproduct.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.53,
+        "explanation": "Answer demonstrates good understanding with adequate coverage of key concepts."
+      },
+      "similarity": 0.95,
+      "features": {
+        "word_count": 26,
+        "keyword_coverage": 0.5555555555555556,
+        "num_missing_keywords": 8,
+        "missing_keywords": [
+          "produce",
+          "light",
+          "plants",
+          "mainly",
+          "use",
+          "energy",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 37,
+      "question_id": "Q2",
+      "student_answer": "The water cycle begins with evaporation from water bodies, followed by condensation in the atmosphere forming clouds, precipitation falling as rain or snow, and finally collection in rivers, lakes, and groundwater.",
+      "ground_truth": "none",
+      "prediction": {
+        "predicted_error_type": "none",
+        "confidence": 0.54,
+        "explanation": "Answer demonstrates good understanding with adequate coverage of key concepts."
+      },
+      "similarity": 0.931,
+      "features": {
+        "word_count": 31,
+        "keyword_coverage": 0.5789473684210527,
+        "num_missing_keywords": 8,
+        "missing_keywords": [
+          "turns",
+          "consists",
+          "underground",
+          "gathers",
+          "vapor",
+          "oceans",
+          "forms",
+          "falls"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 38,
+      "question_id": "Q1",
+      "student_answer": "Photosynthesis involves plants using their roots to absorb sunlight directly from the soil.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 0.98,
+        "explanation": "Low keyword coverage (17%). Missing key concepts: carbon, produce, light, mainly, use."
+      },
+      "similarity": 0.784,
+      "features": {
+        "word_count": 13,
+        "keyword_coverage": 0.16666666666666666,
+        "num_missing_keywords": 15,
+        "missing_keywords": [
+          "carbon",
+          "produce",
+          "light",
+          "mainly",
+          "use",
+          "energy",
+          "leaves",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 39,
+      "question_id": "Q2",
+      "student_answer": "The water cycle starts when the sun creates new water molecules that float up to make clouds.",
+      "ground_truth": "conceptual_error",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (16%). Missing key concepts: turns, condensation, precipitation, lakes, rain."
+      },
+      "similarity": 0.71,
+      "features": {
+        "word_count": 17,
+        "keyword_coverage": 0.15789473684210525,
+        "num_missing_keywords": 16,
+        "missing_keywords": [
+          "turns",
+          "condensation",
+          "precipitation",
+          "lakes",
+          "rain",
+          "underground",
+          "gathers",
+          "consists",
+          "snow",
+          "vapor",
+          "oceans",
+          "bodies",
+          "forms",
+          "collection",
+          "falls",
+          "evaporation"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 40,
+      "question_id": "Q3",
+      "student_answer": "Mitosis and meiosis both happen in the nucleus and involve chromosomes lining up.",
+      "ground_truth": "missing_key_concepts",
+      "prediction": {
+        "predicted_error_type": "missing_key_concepts",
+        "confidence": 1.0,
+        "explanation": "Low keyword coverage (15%). Missing key concepts: number, genetically, growth, identical, cells."
+      },
+      "similarity": 0.682,
+      "features": {
+        "word_count": 13,
+        "keyword_coverage": 0.15,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "number",
+          "genetically",
+          "growth",
+          "identical",
+          "cells",
+          "produces",
+          "two",
+          "parent",
+          "different",
+          "producing",
+          "cell",
+          "four",
+          "repair",
+          "division",
+          "sex",
+          "daughter",
+          "half"
+        ],
+        "num_spelling_errors": 0,
+        "misspelled_words": [],
+        "spelling_error_ratio": 0.0
+      }
+    },
+    {
+      "index": 41,
+      "question_id": "Q1",
+      "student_answer": "Fotosinthesis is wen plantes use lite too maek fod and oxegen.",
+      "ground_truth": "linguistic_error",
+      "prediction": {
+        "predicted_error_type": "linguistic_error",
+        "confidence": 1.0,
+        "explanation": "Multiple spelling errors detected: fotosinthesis, maek, fod, oxegen, plantes. Additionally detected: conceptual_error."
+      },
+      "similarity": 0.483,
+      "features": {
+        "word_count": 11,
+        "keyword_coverage": 0.05555555555555555,
+        "num_missing_keywords": 17,
+        "missing_keywords": [
+          "photosynthesis",
+          "carbon",
+          "produce",
+          "light",
+          "plants",
+          "mainly",
+          "energy",
+          "leaves",
+          "sunlight",
+          "glucose",
+          "oxygen",
+          "water",
+          "chlorophyll",
+          "dioxide",
+          "process",
+          "occurs",
+          "captures"
+        ],
+        "num_spelling_errors": 5,
+        "misspelled_words": [
+          "fotosinthesis",
+          "maek",
+          "fod",
+          "oxegen",
+          "plantes"
+        ],
+        "spelling_error_ratio": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+ "n_students": 19,
+ "n_sentences": 1254,
+ "mean_cosine": 0.882,
+ "min_cosine": 0.66,
+ "spearman_rank_correlation": {
+  "PHONO": 0.311,
+  "ORTHO": 0.179,
+  "SEG": 0.618,
+  "ERROR_DENSITY": 0.898
+ },
+ "per_student": [
+  {
+   "student": "Ann Barley",
+   "gold_props": [
+    0.279,
+    0.581,
+    0.14
+   ],
+   "pred_props": [
+    0.446,
+    0.232,
+    0.321
+   ],
+   "cosine": 0.773,
+   "gold_total": 43,
+   "pred_total": 168
+  },
+  {
+   "student": "Daphne Badland",
+   "gold_props": [
+    0.38,
+    0.44,
+    0.18
+   ],
+   "pred_props": [
+    0.43,
+    0.25,
+    0.32
+   ],
+   "cosine": 0.92,
+   "gold_total": 50,
+   "pred_total": 100
+  },
+  {
+   "student": "George Green",
+   "gold_props": [
+    0.239,
+    0.742,
+    0.018
+   ],
+   "pred_props": [
+    0.6,
+    0.296,
+    0.104
+   ],
+   "cosine": 0.691,
+   "gold_total": 163,
+   "pred_total": 125
+  },
+  {
+   "student": "Gerald Goodchild",
+   "gold_props": [
+    0.212,
+    0.576,
+    0.212
+   ],
+   "pred_props": [
+    0.378,
+    0.4,
+    0.222
+   ],
+   "cosine": 0.928,
+   "gold_total": 33,
+   "pred_total": 45
+  },
+  {
+   "student": "Jack O'Malley",
+   "gold_props": [
+    0.63,
+    0.259,
+    0.111
+   ],
+   "pred_props": [
+    0.508,
+    0.369,
+    0.123
+   ],
+   "cosine": 0.972,
+   "gold_total": 54,
+   "pred_total": 65
+  },
+  {
+   "student": "James Carr",
+   "gold_props": [
+    0.492,
+    0.492,
+    0.016
+   ],
+   "pred_props": [
+    0.635,
+    0.299,
+    0.066
+   ],
+   "cosine": 0.939,
+   "gold_total": 124,
+   "pred_total": 137
+  },
+  {
+   "student": "Joan Stall",
+   "gold_props": [
+    0.393,
+    0.536,
+    0.071
+   ],
+   "pred_props": [
+    0.551,
+    0.307,
+    0.142
+   ],
+   "cosine": 0.905,
+   "gold_total": 84,
+   "pred_total": 127
+  },
+  {
+   "student": "John Young",
+   "gold_props": [
+    0.636,
+    0.318,
+    0.045
+   ],
+   "pred_props": [
+    0.492,
+    0.271,
+    0.237
+   ],
+   "cosine": 0.943,
+   "gold_total": 44,
+   "pred_total": 59
+  },
+  {
+   "student": "Judith Ward",
+   "gold_props": [
+    0.478,
+    0.435,
+    0.087
+   ],
+   "pred_props": [
+    0.404,
+    0.273,
+    0.323
+   ],
+   "cosine": 0.891,
+   "gold_total": 23,
+   "pred_total": 99
+  },
+  {
+   "student": "Kenneth Prime",
+   "gold_props": [
+    0.267,
+    0.683,
+    0.05
+   ],
+   "pred_props": [
+    0.547,
+    0.312,
+    0.141
+   ],
+   "cosine": 0.772,
+   "gold_total": 60,
+   "pred_total": 64
+  },
+  {
+   "student": "Michael Holmes",
+   "gold_props": [
+    0.417,
+    0.562,
+    0.021
+   ],
+   "pred_props": [
+    0.524,
+    0.405,
+    0.071
+   ],
+   "cosine": 0.96,
+   "gold_total": 48,
+   "pred_total": 42
+  },
+  {
+   "student": "Nigel Thrush",
+   "gold_props": [
+    0.415,
+    0.489,
+    0.096
+   ],
+   "pred_props": [
+    0.699,
+    0.175,
+    0.126
+   ],
+   "cosine": 0.817,
+   "gold_total": 94,
+   "pred_total": 183
+  },
+  {
+   "student": "Pat Johnson",
+   "gold_props": [
+    0.375,
+    0.583,
+    0.042
+   ],
+   "pred_props": [
+    0.488,
+    0.349,
+    0.163
+   ],
+   "cosine": 0.911,
+   "gold_total": 24,
+   "pred_total": 43
+  },
+  {
+   "student": "Robert Shire",
+   "gold_props": [
+    0.348,
+    0.609,
+    0.043
+   ],
+   "pred_props": [
+    0.462,
+    0.359,
+    0.179
+   ],
+   "cosine": 0.9,
+   "gold_total": 23,
+   "pred_total": 39
+  },
+  {
+   "student": "Roger Scott",
+   "gold_props": [
+    0.297,
+    0.622,
+    0.081
+   ],
+   "pred_props": [
+    0.5,
+    0.176,
+    0.324
+   ],
+   "cosine": 0.66,
+   "gold_total": 37,
+   "pred_total": 34
+  },
+  {
+   "student": "Rose Jameson",
+   "gold_props": [
+    0.489,
+    0.456,
+    0.056
+   ],
+   "pred_props": [
+    0.515,
+    0.371,
+    0.114
+   ],
+   "cosine": 0.988,
+   "gold_total": 305,
+   "pred_total": 229
+  },
+  {
+   "student": "Tom Sullivan",
+   "gold_props": [
+    0.385,
+    0.462,
+    0.154
+   ],
+   "pred_props": [
+    0.529,
+    0.247,
+    0.224
+   ],
+   "cosine": 0.907,
+   "gold_total": 39,
+   "pred_total": 85
+  },
+  {
+   "student": "Walter Perkins",
+   "gold_props": [
+    0.556,
+    0.361,
+    0.083
+   ],
+   "pred_props": [
+    0.684,
+    0.211,
+    0.105
+   ],
+   "cosine": 0.962,
+   "gold_total": 36,
+   "pred_total": 38
+  },
+  {
+   "student": "William Glebe",
+   "gold_props": [
+    0.316,
+    0.421,
+    0.263
+   ],
+   "pred_props": [
+    0.377,
+    0.23,
+    0.393
+   ],
+   "cosine": 0.918,
+   "gold_total": 19,
+   "pred_total": 61
+  }
+ ]
+}

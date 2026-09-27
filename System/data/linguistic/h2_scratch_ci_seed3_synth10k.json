@@ -1,0 +1,13 @@
+{
+ "seed": 3,
+ "n": 692,
+ "final_tag": "_synth10k",
+ "real_only_scratch_f1": 0.7359,
+ "curriculum_final_f1": 0.6892,
+ "diff": -0.0467,
+ "diff_ci95": [
+  -0.0769,
+  -0.0162
+ ],
+ "p_diff_leq_0": 0.9995
+}

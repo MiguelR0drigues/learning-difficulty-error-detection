@@ -1,0 +1,14 @@
+{
+ "seed": 1,
+ "run_tag": "_synth10k",
+ "eval_set": "real",
+ "n": 692,
+ "stage2_f1": 0.7298,
+ "final_f1": 0.7216,
+ "diff": -0.0082,
+ "diff_ci95": [
+  -0.0253,
+  0.0098
+ ],
+ "p_diff_leq_0": 0.829
+}

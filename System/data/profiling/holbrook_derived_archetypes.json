@@ -1,0 +1,75 @@
+{
+ "n_students": 19,
+ "k": 3,
+ "silhouette": 0.338,
+ "archetypes": {
+  "REAL_ORTHO_C0": {
+   "members": [
+    "Ann Barley",
+    "Daphne Badland",
+    "Gerald Goodchild",
+    "Judith Ward",
+    "Tom Sullivan",
+    "William Glebe"
+   ],
+   "centroid": {
+    "ERR-PHONO": 0.3416,
+    "ERR-ORTHO": 0.4858,
+    "ERR-SEG": 0.1726,
+    "error_density": 0.0225
+   },
+   "sim_weights": {
+    "PHONO": 7.0,
+    "ORTHO": 10.0,
+    "SEG": 3.6
+   },
+   "error_density": 0.0225
+  },
+  "REAL_ORTHO_C1": {
+   "members": [
+    "George Green",
+    "Joan Stall",
+    "Kenneth Prime",
+    "Michael Holmes",
+    "Nigel Thrush",
+    "Pat Johnson",
+    "Robert Shire",
+    "Roger Scott"
+   ],
+   "centroid": {
+    "ERR-PHONO": 0.3438,
+    "ERR-ORTHO": 0.6034,
+    "ERR-SEG": 0.0528,
+    "error_density": 0.0604
+   },
+   "sim_weights": {
+    "PHONO": 5.7,
+    "ORTHO": 10.0,
+    "SEG": 0.9
+   },
+   "error_density": 0.0604
+  },
+  "REAL_PHONO_C2": {
+   "members": [
+    "Jack O'Malley",
+    "James Carr",
+    "John Young",
+    "Rose Jameson",
+    "Walter Perkins"
+   ],
+   "centroid": {
+    "ERR-PHONO": 0.5604,
+    "ERR-ORTHO": 0.3772,
+    "ERR-SEG": 0.0624,
+    "error_density": 0.0711
+   },
+   "sim_weights": {
+    "PHONO": 10.0,
+    "ORTHO": 6.7,
+    "SEG": 1.1
+   },
+   "error_density": 0.0711
+  }
+ },
+ "provenance": "Holbrook corpus via linguistic/holbrook_to_bio.py"
+}

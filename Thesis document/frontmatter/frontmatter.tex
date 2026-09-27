@@ -1,0 +1,188 @@
+% we include the glossary here (frontmatter is included with \input, so this command is as if it was in main.tex)
+%\input{frontmatter/glossary} % the command makenoidxglossaries requires that the glossary entries must be defined in the preamble (to be compatible with overleaf)
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\maketitlepage
+
+%----------------------------------------------------------------------------------------
+%	STATEMENT OF INTEGRITY
+%----------------------------------------------------------------------------------------
+
+\begin{soi}
+
+% here you put the statement of integrity in the main language of the work. Choose one option.
+\vspace{1cm}
+
+% if the main language is English:
+
+I hereby declare that I have conducted this academic work with integrity.
+
+I have not plagiarised or applied any form of undue use of information or falsification of results along the process leading to its elaboration.
+
+Therefore, the work presented in this document is original and was authored by me, having not been previously used for any other purpose.
+
+I further declare that I have fully acknowledged the Code of Ethical Conduct of P.PORTO.
+
+ISEP, Porto, September 2026
+
+\vspace{2cm}
+
+\begin{flushright}
+\rule{7cm}{0.4pt}\\
+\authorname{} (\studnumber)
+\end{flushright}
+
+
+\end{soi}
+
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION  (optional)
+%----------------------------------------------------------------------------------------
+%
+%\dedicatory{For/Dedicated to/To my\ldots}
+% \begin{dedicatory}
+% [Dedicatory to be added by the author]
+% \end{dedicatory}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+
+This thesis addresses the automatic detection of error patterns linked to learning difficulties in typed student responses, under the practical constraint that annotated data for the target population is scarce. It proposes a modular, text-only architecture with three components: a Transformer-based sequence-labeling module for difficulty-linked linguistic errors (phonological, orthographic, segmentation), a hybrid symbolic and machine-learning module for arithmetic procedural bugs, and an unsupervised profiling module that aggregates detections into interpretable difficulty profiles, understood as statistical profiles over observable error patterns.
+
+Data scarcity is addressed with rule-based synthetic error generation staged in a synthetic-to-real training curriculum. Evaluation on real learner text yields a span-level F-score (the harmonic mean of precision and recall) of 0.642 under a strict exact-span metric. The synthetic-data hypothesis is not supported: a multi-seed paired comparison against real-only training from scratch shows that synthetic pre-training with $10^6$ examples lowers the real-data F-score by 2.5--7 points and is at best neutral with $10^4$ examples, and a scale ablation shows that increasing synthetic volume improves in-domain performance while degrading real-data transfer. These results are consistent with the match between synthetic and authentic error distributions, not data volume, being the limiting factor.
+
+On real writing by children with literacy difficulties, performance drops by roughly 20 F-score points, quantifying the domain gap that defines the main direction for future work; under this shift, free-text detection preserves student rankings by error volume but not by error type, which motivates a two-regime design that routes designed worksheet items to deterministic scoring and free text to the neural model.
+
+For mathematics, on generated malrule data, exact symbolic simulation and a feature-based classifier are complementary, trading precision on modeled bugs against robustness to input noise, and the identifiability of a misconception is shown to depend on the structure of the problem posed. Difficulty profiles are supported by three analyses: recoverability in simulation, archetype-like structure in the writing of 19 real struggling children, and split-half stability of behavioral profiles on 1{,}519 real students.
+
+A pilot-ready prototype demonstrates the pipeline end to end, including a European Portuguese instantiation of the screening mode. Throughout, the system is framed as providing non-clinical, formative information for educators, with claims sized to the evidence.
+
+\end{abstract}
+
+\begin{abstractotherlanguage}
+% here you put the abstract in the "other language": English, if the work is written in Portuguese; Portuguese, if the work is written in English.
+
+Esta tese aborda a deteção automática de padrões de erro associados a dificuldades de aprendizagem em respostas digitadas por alunos, sob a restrição prática de que os dados anotados para a população-alvo são escassos. Propõe-se uma arquitetura modular, baseada exclusivamente em texto, com três componentes: um módulo de etiquetagem sequencial baseado em Transformers para erros linguísticos associados a dificuldades (fonológicos, ortográficos, de segmentação), um módulo híbrido simbólico e de aprendizagem automática para erros procedimentais em aritmética, e um módulo de perfis que agrega as deteções em perfis de dificuldade interpretáveis, entendidos como perfis estatísticos sobre padrões de erro observáveis.
+
+A escassez de dados é abordada com geração sintética de erros baseada em regras, organizada num currículo de treino sintético-para-real. A avaliação em texto real de aprendentes atinge uma medida F (média harmónica da precisão e da cobertura) de 0.642 ao nível do segmento sob uma métrica estrita. A hipótese dos dados sintéticos não é suportada: uma comparação emparelhada multi-semente com treino apenas em dados reais mostra que o pré-treino sintético com $10^6$ exemplos reduz a medida F em dados reais em 2.5--7 pontos e é, na melhor das hipóteses, neutro com $10^4$ exemplos, e uma ablação de escala mostra que aumentar o volume sintético melhora o desempenho no domínio sintético mas degrada a transferência para dados reais. Estes resultados são consistentes com a correspondência entre as distribuições de erro sintéticas e autênticas, e não o volume de dados, ser o fator limitante.
+
+Em escrita real de crianças com dificuldades de literacia, o desempenho cai cerca de 20 pontos de medida F, quantificando o fosso de domínio que define a principal direção de trabalho futuro; sob este desvio, a deteção em texto livre preserva a ordenação dos alunos por volume de erros mas não por tipo de erro, o que motiva um desenho de dois regimes que encaminha itens de fichas de trabalho para pontuação determinística e texto livre para o modelo neuronal.
+
+Na matemática, em dados gerados com regras de erro modeladas, a simulação simbólica exata e um classificador baseado em características são complementares, trocando precisão em erros modelados por robustez ao ruído, e mostra-se que a identificabilidade de uma conceção errónea depende da estrutura do problema apresentado. Os perfis de dificuldade são apoiados por três análises: recuperabilidade em simulação, estrutura de arquétipos na escrita de 19 crianças reais com dificuldades, e estabilidade por divisão em duas metades de perfis comportamentais em 1{,}519 alunos reais.
+
+Um protótipo pronto para piloto demonstra a cadeia completa, incluindo uma instanciação em Português Europeu do modo de rastreio. A informação fornecida aos educadores é não-clínica e formativa, com afirmações dimensionadas à evidência.
+
+\end{abstractotherlanguage}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS (optional)
+%----------------------------------------------------------------------------------------
+
+% \begin{acknowledgements}
+
+% [Acknowledgements to be added by the author]
+
+% \end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+\iflanguage{portuguese}{
+\renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
+}
+% Commented out - no algorithm environments in current thesis chapters
+%\listofalgorithms % Prints the list of algorithms
+%\addchaptertocentry{\listalgorithmname}
+
+
+\renewcommand{\lstlistlistingname}{List of Source Code}
+\iflanguage{portuguese}{
+\renewcommand{\lstlistlistingname}{Lista de C\'odigo}
+}
+% Commented out - no lstlisting environments in current thesis chapters
+%\lstlistoflistings % Prints the list of listings (programming language source code)
+%\addchaptertocentry{\lstlistlistingname}
+
+
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+%\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+%%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+%%\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+%\end{abbreviations}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+\begin{symbols}{ll} % Include a list of Symbols (a two column table)
+
+$P$ & precision \\
+$R$ & recall \\
+$F_1$ & \(F\)-score with \(\beta=1\) (precision and recall weighted equally) \\
+$F_{0.5}$ & \(F\)-score with \(\beta=0.5\) (precision weighted higher than recall) \\
+$TP$ & true positives \\
+$FP$ & false positives \\
+$FN$ & false negatives \\
+$x$ & input text (e.g., a student response) \\
+$y$ & output labels (e.g., error tags per token) \\
+$p_{\theta}(y\mid x)$ & model probability of \(y\) given \(x\) \\
+$\mathcal{L}$ & training loss function \\
+
+\addlinespace % Gap to separate the Roman symbols from the Greek
+
+$\beta$ & \(F\)-score weighting parameter \\
+$\theta$ & model parameters \\
+
+\end{symbols}
+
+
+
+%----------------------------------------------------------------------------------------
+%	ACRONYMS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\listacronymname}{List of Acronyms}
+\iflanguage{portuguese}{
+\renewcommand{\listacronymname}{Lista de Acr\'onimos}
+}
+
+%Use GLS
+\glsresetall
+\glsaddallunused
+
+%\printglossary[title=\listacronymname,type=\acronymtype,style=long]
+\printnoidxglossary[title=\listacronymname,type=\acronymtype,style=long] % command compatible with overleaf
+
+\newcommand{\listglossaryname}{Glossary}
+\iflanguage{portuguese}{
+\renewcommand{\listglossaryname}{Gloss\'ario}
+}
+\printnoidxglossary[title=\listglossaryname,style=long]
+
+%----------------------------------------------------------------------------------------
+%	DONE
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\pagestyle{thesis} % Return the page headers back to the "thesis" style

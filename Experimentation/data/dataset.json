@@ -1,0 +1,380 @@
+[
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and release oxygen. This happens in the chloroplasts of plant cells.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Plants use light to convert water and CO2 into sugar and oxygen through photosynthesis, which takes place in their leaves.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosynthesis is when plants eat sunlight to grow bigger.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Its how plants breathe and eat at the same time using the sun.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Plants absorb sunlight through their leaves and this gives them energy to live, like how we eat food.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Plants use light to make food.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "It is a process in the leaves where plants make glucose.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Plants take in light and release oxygen through this process.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosinthesis is a proces where plants makes sugar and oxigen using lite.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosynthisis hapens wen plants use sunlite to produse glucos.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Plants make food.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Its about plants.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The water cycle has four stages: evaporation where water becomes vapor, condensation where clouds form, precipitation where rain falls, and collection where water gathers in oceans and rivers.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Water evaporates from the ocean, rises up to form clouds through condensation, then falls back as rain or snow, and collects in lakes and rivers.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The water cycle is how water moves around the earth through different phases like gas and liquid.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Water gets heated by the sun and then turns into ice which goes up into the sky.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Rain comes from clouds and goes into rivers. Then it goes back up somehow.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Evaporation, condensation, precipitation.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Water goes up and then comes down as rain.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The stages include evaporation and rain falling from clouds.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The watter cicle has evapuration, condinsation, and percipitation as its maine stages.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Evaperation occures when watter heats up and condansation makes cloudes.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "Water moves around.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "It rains.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mitosis creates two identical cells with the full chromosome count for growth and repair, while meiosis creates four different cells with half the chromosomes for reproduction.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "In mitosis, a cell divides to make two copies of itself for the body to grow. In meiosis, a cell divides twice to make four sex cells with half the DNA.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Both mitosis and meiosis are basically the same thing, they both split cells in half.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mitosis is for making sex cells and meiosis is for growing the body.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Meiosis doubles the chromosomes while mitosis keeps them the same.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mitosis makes two cells and meiosis makes four cells.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "One is for body cells and one is for reproduction.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "They are both types of cell division with different numbers of resulting cells.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mytosis produses two sels and meosis produses for sels with les cromosomes.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mitoesis is fore groth and meioesis is fore reproduktion in liveing organismes.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "They're different.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Cell division.",
+    "is_correct": false,
+    "error_label": "vague_answer",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosynthesis is a chemical process in which chlorophyll in plant leaves absorbs sunlight to convert carbon dioxide and water into glucose, releasing oxygen as a byproduct.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The water cycle begins with evaporation from water bodies, followed by condensation in the atmosphere forming clouds, precipitation falling as rain or snow, and finally collection in rivers, lakes, and groundwater.",
+    "is_correct": true,
+    "error_label": "none",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Photosynthesis involves plants using their roots to absorb sunlight directly from the soil.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  },
+  {
+    "question_id": "Q2",
+    "question_text": "Describe the main stages of the water cycle.",
+    "reference_answer": "The water cycle consists of evaporation, where water from oceans and lakes turns into vapor; condensation, where vapor forms clouds; precipitation, where water falls as rain or snow; and collection, where water gathers in bodies of water or underground.",
+    "student_answer": "The water cycle starts when the sun creates new water molecules that float up to make clouds.",
+    "is_correct": false,
+    "error_label": "conceptual_error",
+    "correct_answer_example": "The water cycle includes evaporation (water turning into vapor from heat), condensation (vapor cooling to form clouds), precipitation (water falling as rain or snow), and collection (water gathering in oceans, rivers, and underground)."
+  },
+  {
+    "question_id": "Q3",
+    "question_text": "Explain the difference between mitosis and meiosis.",
+    "reference_answer": "Mitosis is cell division that produces two identical daughter cells with the same number of chromosomes as the parent cell, used for growth and repair. Meiosis is cell division that produces four genetically different cells with half the chromosomes, used for producing sex cells.",
+    "student_answer": "Mitosis and meiosis both happen in the nucleus and involve chromosomes lining up.",
+    "is_correct": false,
+    "error_label": "missing_key_concepts",
+    "correct_answer_example": "Mitosis produces two genetically identical daughter cells with the same chromosome number for body growth and repair, while meiosis produces four genetically diverse cells with half the chromosomes for sexual reproduction."
+  },
+  {
+    "question_id": "Q1",
+    "question_text": "Explain in your own words what photosynthesis is.",
+    "reference_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs mainly in the leaves where chlorophyll captures light energy.",
+    "student_answer": "Fotosinthesis is wen plantes use lite too maek fod and oxegen.",
+    "is_correct": false,
+    "error_label": "linguistic_error",
+    "correct_answer_example": "Photosynthesis is the process where plants convert light energy into chemical energy, using carbon dioxide and water to produce glucose and oxygen with the help of chlorophyll in the leaves."
+  }
+]

@@ -1,0 +1,17 @@
+# latexmk configuration file
+# Configuration for continuous preview mode
+
+$recorder = 1;
+
+# PDF viewer for preview continuous mode
+# On Windows, it will use the system default for .pdf files
+if ($^O eq 'MSWin32') {
+    # Windows
+    $pdf_previewer = 'start %s';
+} elsif ($^O eq 'darwin') {
+    # macOS
+    $pdf_previewer = 'open %s';
+} else {
+    # Linux
+    $pdf_previewer = 'xdg-open %s';
+}

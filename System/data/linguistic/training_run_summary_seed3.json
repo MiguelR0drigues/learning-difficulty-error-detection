@@ -1,0 +1,98 @@
+[
+  {
+    "stage": "1_synthetic_only",
+    "train_loss": 0.012174949106609873,
+    "wall_time_s": 6554.1,
+    "nan_params_count": 0,
+    "eval_loss": 0.003028235398232937,
+    "eval_precision": 0.9871801247177937,
+    "eval_recall": 0.99258,
+    "eval_f1": 0.9898726981705037,
+    "eval_pred_tag_counts": {
+      "O": 1449528,
+      "B-PHONO": 38800,
+      "I-PHONO": 48704,
+      "B-ORTHO": 22337,
+      "I-ORTHO": 33988,
+      "B-SEG": 39282,
+      "I-SEG": 73425
+    },
+    "eval_gold_tag_counts": {
+      "O": 1450245,
+      "B-PHONO": 38563,
+      "I-PHONO": 48623,
+      "B-ORTHO": 22147,
+      "I-ORTHO": 33794,
+      "B-SEG": 39290,
+      "I-SEG": 73402
+    },
+    "eval_runtime": 116.2696,
+    "eval_samples_per_second": 860.07,
+    "eval_steps_per_second": 53.754,
+    "epoch": 2.0
+  },
+  {
+    "stage": "2_real_only",
+    "train_loss": 0.04796180801087832,
+    "wall_time_s": 223.4,
+    "nan_params_count": 0,
+    "eval_loss": 0.08813177049160004,
+    "eval_precision": 0.571583514099783,
+    "eval_recall": 0.6579275905118602,
+    "eval_f1": 0.6117237376668601,
+    "eval_pred_tag_counts": {
+      "O": 15234,
+      "B-ORTHO": 374,
+      "I-ORTHO": 606,
+      "B-PHONO": 376,
+      "I-PHONO": 360,
+      "B-SEG": 111,
+      "I-SEG": 103
+    },
+    "eval_gold_tag_counts": {
+      "O": 15352,
+      "B-ORTHO": 326,
+      "I-ORTHO": 452,
+      "B-PHONO": 383,
+      "I-PHONO": 477,
+      "B-SEG": 92,
+      "I-SEG": 82
+    },
+    "eval_runtime": 1.0894,
+    "eval_samples_per_second": 635.223,
+    "eval_steps_per_second": 40.39,
+    "epoch": 8.0
+  },
+  {
+    "stage": "3_combined",
+    "train_loss": 0.002424320845187709,
+    "wall_time_s": 6702.8,
+    "nan_params_count": 0,
+    "eval_loss": 0.004798612557351589,
+    "eval_precision": 0.9861639195314892,
+    "eval_recall": 0.9906250930050298,
+    "eval_f1": 0.9883894723297271,
+    "eval_pred_tag_counts": {
+      "O": 1465046,
+      "B-PHONO": 39046,
+      "I-PHONO": 48906,
+      "B-ORTHO": 22664,
+      "I-ORTHO": 34712,
+      "B-SEG": 39379,
+      "I-SEG": 73475
+    },
+    "eval_gold_tag_counts": {
+      "O": 1465597,
+      "B-PHONO": 38946,
+      "I-PHONO": 49100,
+      "B-ORTHO": 22473,
+      "I-ORTHO": 34246,
+      "B-SEG": 39382,
+      "I-SEG": 73484
+    },
+    "eval_runtime": 117.7402,
+    "eval_samples_per_second": 855.205,
+    "eval_steps_per_second": 53.457,
+    "epoch": 2.0
+  }
+]

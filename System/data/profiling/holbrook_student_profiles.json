@@ -1,0 +1,154 @@
+{
+ "Nigel Thrush": {
+  "ERR-PHONO": 39,
+  "ERR-ORTHO": 46,
+  "ERR-SEG": 9,
+  "OTHER": 94,
+  "n_sentences": 152,
+  "n_tokens": 1673
+ },
+ "Joan Stall": {
+  "ERR-PHONO": 33,
+  "ERR-ORTHO": 45,
+  "ERR-SEG": 6,
+  "OTHER": 89,
+  "n_sentences": 96,
+  "n_tokens": 1168
+ },
+ "George Green": {
+  "ERR-PHONO": 39,
+  "ERR-ORTHO": 121,
+  "ERR-SEG": 3,
+  "OTHER": 130,
+  "n_sentences": 55,
+  "n_tokens": 2093
+ },
+ "John Young": {
+  "ERR-PHONO": 28,
+  "ERR-ORTHO": 14,
+  "ERR-SEG": 2,
+  "OTHER": 36,
+  "n_sentences": 48,
+  "n_tokens": 926
+ },
+ "Ann Barley": {
+  "ERR-PHONO": 12,
+  "ERR-ORTHO": 25,
+  "ERR-SEG": 6,
+  "OTHER": 92,
+  "n_sentences": 159,
+  "n_tokens": 2333
+ },
+ "William Glebe": {
+  "ERR-PHONO": 6,
+  "ERR-ORTHO": 8,
+  "ERR-SEG": 5,
+  "OTHER": 17,
+  "n_sentences": 61,
+  "n_tokens": 1110
+ },
+ "Walter Perkins": {
+  "ERR-PHONO": 20,
+  "ERR-ORTHO": 13,
+  "ERR-SEG": 3,
+  "OTHER": 32,
+  "n_sentences": 20,
+  "n_tokens": 430
+ },
+ "Roger Scott": {
+  "ERR-PHONO": 11,
+  "ERR-ORTHO": 23,
+  "ERR-SEG": 3,
+  "OTHER": 39,
+  "n_sentences": 31,
+  "n_tokens": 668
+ },
+ "James Carr": {
+  "ERR-PHONO": 61,
+  "ERR-ORTHO": 61,
+  "ERR-SEG": 2,
+  "OTHER": 111,
+  "n_sentences": 72,
+  "n_tokens": 1504
+ },
+ "Jack O'Malley": {
+  "ERR-PHONO": 34,
+  "ERR-ORTHO": 14,
+  "ERR-SEG": 6,
+  "OTHER": 44,
+  "n_sentences": 48,
+  "n_tokens": 1079
+ },
+ "Tom Sullivan": {
+  "ERR-PHONO": 15,
+  "ERR-ORTHO": 18,
+  "ERR-SEG": 6,
+  "OTHER": 52,
+  "n_sentences": 59,
+  "n_tokens": 1179
+ },
+ "Rose Jameson": {
+  "ERR-PHONO": 149,
+  "ERR-ORTHO": 139,
+  "ERR-SEG": 17,
+  "OTHER": 247,
+  "n_sentences": 80,
+  "n_tokens": 3315
+ },
+ "Kenneth Prime": {
+  "ERR-PHONO": 16,
+  "ERR-ORTHO": 41,
+  "ERR-SEG": 3,
+  "OTHER": 66,
+  "n_sentences": 36,
+  "n_tokens": 563
+ },
+ "Robert Shire": {
+  "ERR-PHONO": 8,
+  "ERR-ORTHO": 14,
+  "ERR-SEG": 1,
+  "OTHER": 14,
+  "n_sentences": 36,
+  "n_tokens": 925
+ },
+ "Gerald Goodchild": {
+  "ERR-PHONO": 7,
+  "ERR-ORTHO": 19,
+  "ERR-SEG": 7,
+  "OTHER": 105,
+  "n_sentences": 35,
+  "n_tokens": 1091
+ },
+ "Judith Ward": {
+  "ERR-PHONO": 11,
+  "ERR-ORTHO": 10,
+  "ERR-SEG": 2,
+  "OTHER": 32,
+  "n_sentences": 101,
+  "n_tokens": 2294
+ },
+ "Pat Johnson": {
+  "ERR-PHONO": 9,
+  "ERR-ORTHO": 14,
+  "ERR-SEG": 1,
+  "OTHER": 13,
+  "n_sentences": 41,
+  "n_tokens": 752
+ },
+ "Daphne Badland": {
+  "ERR-PHONO": 19,
+  "ERR-ORTHO": 22,
+  "ERR-SEG": 9,
+  "OTHER": 48,
+  "n_sentences": 92,
+  "n_tokens": 1931
+ },
+ "Michael Holmes": {
+  "ERR-PHONO": 20,
+  "ERR-ORTHO": 27,
+  "ERR-SEG": 1,
+  "OTHER": 35,
+  "n_sentences": 32,
+  "n_tokens": 823
+ }
+}

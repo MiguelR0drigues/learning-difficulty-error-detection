@@ -1,0 +1,34 @@
+{
+ "n_students": 1519,
+ "min_responses": 50,
+ "feature_names": [
+  "accuracy",
+  "mean_attempts",
+  "hint_rate",
+  "median_first_response_s",
+  "mastery_fail_rate"
+ ],
+ "best_k": 2,
+ "silhouette": 0.385,
+ "split_half_ari": 0.587,
+ "cluster_sizes": {
+  "0": 1033,
+  "1": 486
+ },
+ "cluster_centroids_raw": {
+  "0": {
+   "accuracy": 0.7193,
+   "mean_attempts": 1.3782,
+   "hint_rate": 0.1037,
+   "median_first_response_s": 24.994,
+   "mastery_fail_rate": 0.0687
+  },
+  "1": {
+   "accuracy": 0.4105,
+   "mean_attempts": 2.2193,
+   "hint_rate": 0.3553,
+   "median_first_response_s": 16.1669,
+   "mastery_fail_rate": 0.1559
+  }
+ }
+}

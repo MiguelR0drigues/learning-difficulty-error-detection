@@ -1,0 +1,26 @@
+{
+  "subtraction": {
+    "clean": {
+      "ml_accuracy": 1.0,
+      "ml_macro_f1": 0.8,
+      "symbolic_accuracy": 1.0,
+      "symbolic_macro_f1": 0.8
+    },
+    "noisy": {
+      "ml_accuracy": 0.6166666666666667,
+      "ml_macro_f1": 0.43472808952637826,
+      "symbolic_accuracy": 0.0,
+      "symbolic_macro_f1": 0.0
+    }
+  },
+  "fractions": {
+    "fraction_add": {
+      "ml_accuracy": 1.0,
+      "symbolic_accuracy": 1.0
+    },
+    "fraction_compare": {
+      "ml_accuracy": 1.0,
+      "symbolic_accuracy": 1.0
+    }
+  }
+}

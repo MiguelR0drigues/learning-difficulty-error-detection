@@ -1,0 +1,21 @@
+{
+ "benchmark": "holbrook_bio.json",
+ "n_sentences": 531,
+ "n_boot": 1000,
+ "neural_f1": 0.4026,
+ "neural_ci95": [
+  0.3718,
+  0.4335
+ ],
+ "baseline_f1": 0.3184,
+ "baseline_ci95": [
+  0.2864,
+  0.3483
+ ],
+ "diff_point": 0.0841,
+ "diff_ci95": [
+  0.0343,
+  0.1324
+ ],
+ "p_diff_leq_0": 0.0
+}

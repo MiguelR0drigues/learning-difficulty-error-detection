@@ -1,0 +1,46 @@
+[
+  {
+    "stage": "1_synthetic_only",
+    "train_loss": 1.151410460472107,
+    "wall_time_s": 2.2,
+    "nan_params_count": 0
+  },
+  {
+    "stage": "2_real_only",
+    "train_loss": 0.9647154808044434,
+    "wall_time_s": 1.2,
+    "nan_params_count": 0
+  },
+  {
+    "stage": "3_combined",
+    "train_loss": 0.8978744149208069,
+    "wall_time_s": 1.0,
+    "nan_params_count": 0,
+    "eval_loss": 0.8818278312683105,
+    "eval_precision": 0.0,
+    "eval_recall": 0.0,
+    "eval_f1": 0.0,
+    "eval_pred_tag_counts": {
+      "B-PHONO": 26,
+      "B-SEG": 11,
+      "I-PHONO": 6,
+      "O": 33,
+      "B-ORTHO": 51,
+      "I-SEG": 7,
+      "I-ORTHO": 1
+    },
+    "eval_gold_tag_counts": {
+      "B-ORTHO": 4,
+      "I-ORTHO": 10,
+      "O": 114,
+      "B-PHONO": 1,
+      "I-PHONO": 3,
+      "B-SEG": 1,
+      "I-SEG": 2
+    },
+    "eval_runtime": 0.0111,
+    "eval_samples_per_second": 540.898,
+    "eval_steps_per_second": 90.15,
+    "epoch": 1.0
+  }
+]

@@ -1,0 +1,107 @@
+% All acronyms and glossary terms should be written in this file.
+% Keep definitions beginner-friendly (assume a reader outside NLP/AI/education research).
+
+% -----------------------------------------------------------------------------
+% Acronyms
+% -----------------------------------------------------------------------------
+
+\newacronym{AI}{AI}{Artificial Intelligence}
+\newacronym{NLP}{NLP}{Natural Language Processing}
+\newacronym{AWE}{AWE}{Automated Writing Evaluation}
+\newacronym{AES}{AES}{Automated Essay Scoring}
+\newacronym{GEC}{GEC}{Grammatical Error Correction}
+\newacronym{ITS}{ITS}{Intelligent Tutoring System}
+\newacronym{EDM}{EDM}{Educational Data Mining}
+
+\newacronym{LLM}{LLM}{Large Language Model}
+
+
+
+
+\newacronym{LSTM}{LSTM}{Long Short-Term Memory}
+\newacronym{BiLSTM}{BiLSTM}{Bidirectional Long Short-Term Memory}
+\newacronym{CNN}{CNN}{Convolutional Neural Network}
+\newacronym{CRF}{CRF}{Conditional Random Field}
+
+\newacronym{BERT}{BERT}{Bidirectional Encoder Representations from Transformers}
+
+\newacronym{CoNLL}{CoNLL}{Conference on Natural Language Learning}
+\newacronym{BEA}{BEA}{Workshop on Innovative Use of NLP for Building Educational Applications}
+\newacronym{MTwo}{M2}{MaxMatch (M2) scorer}
+\newacronym{ERRANT}{ERRANT}{Error Annotation Toolkit}
+
+\newacronym{K12}{K--12}{Kindergarten to Grade 12 education}
+\newacronym{NER}{NER}{Named Entity Recognition}
+\newacronym{NUCLE}{NUCLE}{National University of Singapore Corpus of Learner English}
+
+% -----------------------------------------------------------------------------
+% Glossary terms (non-acronyms)
+% -----------------------------------------------------------------------------
+
+\newglossaryentry{nucleCorpus}{
+	name={NUCLE corpus},
+	description={A corpus of English learner essays created at the National University of Singapore; it is widely used as a benchmark dataset for grammatical error correction (e.g., in the CoNLL-2014 shared task)}}
+
+\newglossaryentry{learnerCorpus}{
+	name={learner corpus},
+	description={A collection of texts or responses produced by learners (e.g., language learners or students), often annotated to study typical errors and development patterns}}
+
+\newglossaryentry{errorDetection}{
+	name={error detection},
+	description={The task of identifying where errors occur in a text (and sometimes what type they are), without necessarily producing a corrected version}}
+
+\newglossaryentry{errorCorrection}{
+	name={error correction},
+	description={The task of producing a corrected text from an input text that contains errors, often framed as a generation problem in NLP}}
+
+\newglossaryentry{sequenceLabeling}{
+	name={sequence labeling},
+	description={A modeling setup where each token in a sequence (e.g., each word) receives a label, such as an error tag or a part-of-speech tag}}
+
+\newglossaryentry{token}{
+	name={token},
+	description={A basic unit used by NLP models, such as a word, subword piece, punctuation mark, or character, depending on the tokenizer}}
+
+\newglossaryentry{span}{
+	name={span},
+	description={A contiguous segment of text, such as a phrase or a range of tokens, often used when labeling multi-token errors}}
+
+\newglossaryentry{pretraining}{
+	name={pretraining},
+	description={Training a model on a large generic dataset to learn general language patterns before adapting it to a specific task}}
+
+\newglossaryentry{finetuning}{
+	name={fine-tuning},
+	description={Continuing training of a pretrained model on task-specific data to adapt it to a target task and domain}}
+
+\newglossaryentry{domainAdaptation}{
+	name={domain adaptation},
+	description={Techniques to make a model trained on one domain (e.g., general web text) work better on another (e.g., student writing) }}
+
+\newglossaryentry{syntheticData}{
+	name={synthetic data},
+	description={Artificially generated training data (e.g., by injecting errors or corruptions) used to augment scarce real labeled data}}
+
+\newglossaryentry{misconception}{
+	name={misconception},
+	description={A systematic misunderstanding that leads to consistent incorrect reasoning patterns, rather than an occasional slip or typo}}
+
+\newglossaryentry{formativeAssessment}{
+	name={formative assessment},
+	description={Assessment used to support learning during the learning process, typically through timely feedback and guidance rather than final grading}}
+
+\newglossaryentry{modelTracing}{
+	name={model tracing},
+	description={An ITS approach that compares a student’s step-by-step actions to a cognitive model of how problems can be solved, enabling immediate difficulty identification and feedback}}
+
+\newglossaryentry{precision}{
+	name={precision},
+	description={Among the items predicted as positive (e.g., predicted errors), the fraction that are actually correct}}
+
+\newglossaryentry{recall}{
+	name={recall},
+	description={Among the items that are actually positive (e.g., real errors), the fraction that a system successfully finds}}
+
+\newglossaryentry{fscore}{
+	name={F-score},
+	description={A family of metrics that combine precision and recall; common choices include \(F_1\) (equal weight) and \(F_{0.5}\) (higher weight on precision)}}
